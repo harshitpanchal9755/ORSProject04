@@ -51,7 +51,6 @@ public interface ORSView {
 	public String PGHOSTEL_LIST_VIEW = PAGE_FOLDER + "/PgHostelListView.jsp";
 	public String SOFTWARELICENSE_VIEW = PAGE_FOLDER + "/SoftwareLicenseView.jsp";
 	public String SOFTWARELICENSE_LIST_VIEW = PAGE_FOLDER + "/SoftwareLicenseListView.jsp";
-	
 
 	public String ERROR_CTL = "/ctl/MarksheetCtl";
 
@@ -107,8 +106,10 @@ public interface ORSView {
 	public String SOFTWARELICENSE_CTL = APP_CONTEXT + "/ctl/SoftwareLicenseCtl";
 	public String SOFTWARELICENSE_LIST_CTL = APP_CONTEXT + "/ctl/SoftwareLicenseListCtl";
 
-	
-	
+	public String HOSPITAL_CTL = APP_CONTEXT + "/ctl/HospitalCtl";
+	public String HOSPITAL_VIEW = PAGE_FOLDER + "/HospitalView.jsp";
+	public String HOSPITAL_LIST_CTL = APP_CONTEXT + "/ctl/HospitalListCtl";
+	public String HOSPITAL_LIST_VIEW = PAGE_FOLDER + "/HospitalListView.jsp";
 
 	public String COURSE_REPORT_VIEW = "/reports/CourseListReport.jrxml";
 	public String STUDENT_REPORT_VIEW = "/reports/StudentListReport.jrxml";
@@ -122,6 +123,5 @@ public interface ORSView {
 	public String PRODUCT_REPORT_VIEW = "/reports/ProductListReport.jrxml";
 	public String PGHOSTEL_REPORT_VIEW = "/reports/PgHostelListReport.jrxml";
 	public String SOFTWARELICENSE_REPORT_VIEW = "/reports/SoftwareLicenseListReport.jrxml";
-	
 
 }

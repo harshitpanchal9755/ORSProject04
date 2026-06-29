@@ -344,7 +344,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						style="min-width: 210px; max-width: 400px; max-height: 400px; background: #1a2e4a;">
 
 
-							<!-- Employee -->
+						<!-- Employee -->
 
 						<li>
 							<h6 class="dropdown-header text-uppercase text-info small">
@@ -363,9 +363,9 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						</a></li>
 
 						<li><hr class="dropdown-divider border-secondary"> </a></li>
-						
-						
-							<!-- Pg-Hostel -->
+
+
+						<!-- Pg-Hostel -->
 
 						<li>
 							<h6 class="dropdown-header text-uppercase text-info small">
@@ -377,13 +377,14 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 								<i class="bi bi-building-add me-2 text-success"></i> Add
 								PgHostel
 						</a></li>
-						
-						<li><a class="dropdown-item" href="<%=ORSView.PGHOSTEL_LIST_CTL%>">
-								<i class="bi bi-building-add me-2 text-success"></i>PgHostelList
+
+						<li><a class="dropdown-item"
+							href="<%=ORSView.PGHOSTEL_LIST_CTL%>"> <i
+								class="bi bi-building-add me-2 text-success"></i>PgHostelList
 						</a></li>
-						
+
 						<li><hr class="dropdown-divider border-secondary"></li>
-						
+
 						<!-- SoftewareLicense -->
 
 						<li>
@@ -392,19 +393,39 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 							</h6>
 						</li>
 
-						<li><a class="dropdown-item" href="<%=ORSView.SOFTWARELICENSE_CTL%>">
-								<i class="bi bi-plus-circle me-2 text-success"></i> Add
+						<li><a class="dropdown-item"
+							href="<%=ORSView.SOFTWARELICENSE_CTL%>"> <i
+								class="bi bi-plus-circle me-2 text-success"></i> Add
 								SoftwareLicense
 						</a></li>
-						
-						<li><a class="dropdown-item" href="<%=ORSView.SOFTWARELICENSE_LIST_CTL%>">
-								<i class="bi bi-card-checklist me-2 text-success"></i>SoftwareLicenseList
-									
+
+						<li><a class="dropdown-item"
+							href="<%=ORSView.SOFTWARELICENSE_LIST_CTL%>"> <i
+								class="bi bi-card-checklist me-2 text-success"></i>SoftwareLicenseList
+
 						</a></li>
-						
+
 						<li><hr class="dropdown-divider border-secondary"></li>
 
-						
+						<!-- Hospital -->
+
+						<li>
+							<h6 class="dropdown-header text-uppercae text-info small">
+								<i class="bi bi-hospital me-1 "></i> Hospital 
+							</h6>
+						</li>
+
+						<li><a class="dropdown-item" href="<%=ORSView.HOSPITAL_CTL%>"><i
+								class="bi bi-clipboard2-plus-fill me=2 text-success"></i> Add Hospital</li>
+						</a>
+
+
+						<li><a class="dropdown-item"
+							href="<%=ORSView.HOSPITAL_LIST_CTL%>"> <i class="bi bi-list-check me-2 text-success"></i>
+								HospitalList </li>
+						</a>
+
+						<li><hr class="dropdown-divider border-secondary"></li>
 
 					</ul></li>
 
@@ -426,7 +447,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 			<!-- ===== Right side ===== -->
 			<ul class="navbar-nav align-items-lg-center gap-1 ms-2">
 
-				<!-- Language -->
+				<!-- Language -->	
 				<li class="nav-item">
 					<form class="d-flex align-items-center m-0">
 						<select class="form-select form-select-sm border-0 py-1"

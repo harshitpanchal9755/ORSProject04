@@ -53,7 +53,7 @@ MessageSource ms = MessageSource.getInstance();
 							<i class="bi bi-person-fill me-1"></i><%=ms.get("login.userid")%>
 							<span class="text-danger">*</span>
 						</label> <input type="text" name="login"
-							class="form-control form-control-lg"
+							class="form-control frm-control-lg"
 							placeholder="Enter your login ID"
 							value="<%=DataUtility.getStringData(bean.getLogin())%>">
 						<%

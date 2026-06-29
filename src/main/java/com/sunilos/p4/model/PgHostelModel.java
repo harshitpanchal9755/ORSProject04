@@ -19,10 +19,10 @@ public class PgHostelModel extends BaseModel<PgHostelBean> {
 	public long add(PgHostelBean bean) throws ApplicationException, DuplicateRecordException {
 		Connection conn = null;
 		int pk = 0;
-		
+
 		PgHostelBean existBean = findByOwnerName(bean.getOwnerName());
-		
-		if(existBean != null ) {
+
+		if (existBean != null) {
 			throw new DuplicateRecordException("FindByOwnerName Is Excpetion");
 		}
 
@@ -40,7 +40,7 @@ public class PgHostelModel extends BaseModel<PgHostelBean> {
 			ps.setString(7, bean.getModifiedBy());
 			ps.setTimestamp(8, bean.getCreatedDatetime());
 			ps.setTimestamp(9, bean.getModifiedDatetime());
-			ps.executeUpdate(); //int i = executeupdate // resultset rs = executeQuery
+			ps.executeUpdate(); // int i = executeupdate // resultset rs = executeQuery
 			conn.commit();
 			ps.close();
 
@@ -63,12 +63,12 @@ public class PgHostelModel extends BaseModel<PgHostelBean> {
 	@Override
 	public void update(PgHostelBean bean) throws ApplicationException, DuplicateRecordException {
 		Connection conn = null;
-		
+
 		PgHostelBean existBean = findByOwnerName(bean.getOwnerName());
-		
-		if(existBean != null && existBean.getId() != bean.getId()) {
+
+		if (existBean != null && existBean.getId() != bean.getId()) {
 			throw new DuplicateRecordException("Email id Alreay exist");
-			
+
 		}
 
 		try {
@@ -110,20 +110,23 @@ public class PgHostelModel extends BaseModel<PgHostelBean> {
 	public String getWhereClause(PgHostelBean bean) {
 		StringBuffer sql = new StringBuffer();
 
-		if (bean.getId() > 0) {
-			sql.append(" and id = " + bean.getId());
+		if (bean != null) {
 
-		}
+			if (bean.getId() > 0) {
+				sql.append(" and id = " + bean.getId());
 
-		if (bean.getOwnerName() != null && bean.getOwnerName().length() > 0) {
-			sql.append(" and ownerName like '" + bean.getOwnerName() + "%'");
+			}
+
+			if (bean.getOwnerName() != null && bean.getOwnerName().length() > 0) {
+				sql.append(" and ownerName like '" + bean.getOwnerName() + "%'");
+			}
 		}
+		
 		return sql.toString();
 
 	}
-	
+
 	private PgHostelBean findByOwnerName(String ownerName) {
-		// TODO Auto-generated method stub
 		return findByUniqueColumn("ownerName", ownerName);
 	}
 
