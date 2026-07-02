@@ -82,6 +82,8 @@ public interface ORSView {
 	public String FACULTY_LIST_VIEW = PAGE_FOLDER + "/FacultyListView.jsp";
 	public String FACULTY_CTL = APP_CONTEXT + "/ctl/FacultyCtl";
 	public String FACULTY_LIST_CTL = APP_CONTEXT + "/ctl/FacultyListCtl";
+	
+	/// --- Reports ---- /////
 
 	public String STUDENT_REPORT_CTL = APP_CONTEXT + "/ctl/StudentReportCtl";
 	public String COLLEGE_REPORT_CTL = APP_CONTEXT + "/ctl/CollegeReportCtl";
@@ -95,6 +97,10 @@ public interface ORSView {
 	public String PRODUCT_REPORT_CTL = APP_CONTEXT + "/ctl/ProductReportCtl";
 	public String PGHOSTEL_REPORT_CTL = APP_CONTEXT + "/ctl/PgHostelReportCtl";
 	public String SOFTWARE_REPORT_CTL = APP_CONTEXT + "/ctl/SoftwareReportCtl";
+	public String HOSPITAL_REPORT_CTL = APP_CONTEXT + "/ctl/HospitalReportCtl";
+	
+	//// --- ctl //// list ------//////
+	
 	public String PRODUCT_CTL = APP_CONTEXT + "/ctl/ProductCtl";
 	public String PRODUCT_LIST_CTL = APP_CONTEXT + "/ctl/ProductListCtl";
 	public String INTERVIEW_CTL = APP_CONTEXT + "/ctl/InterViewCtl";
@@ -105,11 +111,16 @@ public interface ORSView {
 	public String PGHOSTEL_LIST_CTL = APP_CONTEXT + "/ctl/PgHostelListCtl";
 	public String SOFTWARELICENSE_CTL = APP_CONTEXT + "/ctl/SoftwareLicenseCtl";
 	public String SOFTWARELICENSE_LIST_CTL = APP_CONTEXT + "/ctl/SoftwareLicenseListCtl";
+	
+	///// ----- Module ------ ///////
 
 	public String HOSPITAL_CTL = APP_CONTEXT + "/ctl/HospitalCtl";
 	public String HOSPITAL_VIEW = PAGE_FOLDER + "/HospitalView.jsp";
 	public String HOSPITAL_LIST_CTL = APP_CONTEXT + "/ctl/HospitalListCtl";
 	public String HOSPITAL_LIST_VIEW = PAGE_FOLDER + "/HospitalListView.jsp";
+	
+	
+	////------ Report View ------- //////
 
 	public String COURSE_REPORT_VIEW = "/reports/CourseListReport.jrxml";
 	public String STUDENT_REPORT_VIEW = "/reports/StudentListReport.jrxml";
@@ -123,5 +134,6 @@ public interface ORSView {
 	public String PRODUCT_REPORT_VIEW = "/reports/ProductListReport.jrxml";
 	public String PGHOSTEL_REPORT_VIEW = "/reports/PgHostelListReport.jrxml";
 	public String SOFTWARELICENSE_REPORT_VIEW = "/reports/SoftwareLicenseListReport.jrxml";
+	public String HOSPITAL_REPORT_VIEW = "/reports/HospitalListReport.jrxml";
 
 }
