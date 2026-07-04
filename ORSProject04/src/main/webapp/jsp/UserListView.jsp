@@ -27,7 +27,7 @@ String _suc = ServletUtility.getSuccessMessage(request);
 			<h5 class="mb-0 fw-bold">
 				<i class="bi bi-people-fill me-2"></i> User List
 			</h5>
-			<div class="d-flex gap-2">	
+			<div class="d-flex gap-2">
 				<a href="<%=ORSView.USER_REPORT_CTL%>" target="_blank"
 					class="btn btn-sm btn-warning fw-semibold"> <i
 					class="bi bi-file-earmark-pdf me-1"></i> Print PDF
@@ -103,14 +103,14 @@ String _suc = ServletUtility.getSuccessMessage(request);
 						<tr>
 							<th width="40"><input type="checkbox"
 								onclick="document.querySelectorAll('input[name=ids]').forEach(c=>c.checked=this.checked)"></th>
-							<th>#</th>
+							<th>S.No</th>
 							<th>First Name</th>
 							<th>Last Name</th>
 							<th>Login ID</th>
 							<th>Gender</th>
 							<th>Date of Birth</th>
 							<th>ROLE ID</th>
-							<th>Action</th>
+							<th>Edit</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -120,7 +120,6 @@ String _suc = ServletUtility.getSuccessMessage(request);
 							UserBean user = (UserBean) session.getAttribute("user");
 							RoleModel model = new RoleModel();
 							RoleBean roleBean = model.findByPK(bean.getRoleId());
-							
 						%>
 						<tr>
 							<td><input type="checkbox" name="ids"
@@ -132,9 +131,9 @@ String _suc = ServletUtility.getSuccessMessage(request);
 							<td><%=bean.getLogin()%></td>
 							<td><%=bean.getGender()%></td>
 							<td class="text-muted small"><%=bean.getDob()%></td>
-							<td><%=roleBean.getName() %></td>
+							<td><%=roleBean.getName()%></td>
 							<td><a href="UserCtl?id=<%=bean.getId()%>"
-							<%=(user.getId() == bean.getId() || bean.getRoleId() == RoleBean.ADMIN) ? "onclick='return false;'" : "" %>
+								<%=(user.getId() == bean.getId() || bean.getRoleId() == RoleBean.ADMIN) ? "onclick='return false;'" : ""%>
 								class="btn btn-sm btn-outline-primary"> <i
 									class="bi bi-pencil"></i> Edit
 							</a></td>
