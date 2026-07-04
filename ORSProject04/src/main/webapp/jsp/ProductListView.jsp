@@ -24,15 +24,15 @@ String _err = ServletUtility.getErrorMessage(request);
 				<i class="bi bi-cart me-2"></i> Product List
 			</h5>
 			<div class="d-flex gap-2">
-				<a href="#" target="_blank"
+				<a href="<%=ORSView.PRODUCT_REPORT_CTL %>" target="_blank"
 					class="btn btn-sm btn-warning fw-semibold"> <i
 					class="bi bi-file-earmark-pdf me-1"></i> Print PDF
-				</a> <a href="#?type=doc" target="_blank"
+				</a> <a href="<%=ORSView.PRODUCT_REPORT_CTL %>?type=doc" target="_blank"
 					class="btn btn-sm btn-info fw-semibold"> <i
 					class="bi bi-file-earmark-word me-1"></i> Print DOC
-				</a> <a href="<%=ORSView.PRODUCT_CTL%>"
+				</a> <a href="ProductCtl"
 					class="btn btn-sm btn-light text-primary fw-semibold"> <i
-					class="bi bi-cart me-1"></i> Add Subject
+					class="bi bi-cart me-1"></i> Add Product
 				</a>
 			</div>
 		</div>
@@ -43,22 +43,19 @@ String _err = ServletUtility.getErrorMessage(request);
 
 			<div
 				class="p-3 bg-light border-bottom d-flex flex-wrap gap-2 align-items-center">
+
 				<input type="text" name="productName"
 					class="form-control form-control-sm" style="max-width: 220px;"
 					placeholder="Search by ProductName"
 					value="<%=ServletUtility.getParameter("productName", request)%>">
-				<input type="text" name="productName"
-					class="form-control form-control-sm" style="max-width: 220px;"
-					placeholder="Search by ProductName"
-					value="<%=ServletUtility.getParameter("productName", request)%>">
+
 				<button type="submit" name="operation"
 					value="<%=BaseCtl.OP_SEARCH%>" class="btn btn-primary btn-sm">
 					<i class="bi bi-search me-1"></i> Search
 				</button>
 				<button type="submit" name="operation"
 					value="<%=BaseCtl.OP_DELETE%>"
-					class="btn btn-danger btn-sm ms-auto"
-					>
+					class="btn btn-danger btn-sm ms-auto">
 					<i class="bi bi-trash me-1"></i> Delete Selected
 				</button>
 			</div>
@@ -78,7 +75,7 @@ String _err = ServletUtility.getErrorMessage(request);
 						<tr>
 							<th width="40"><input type="checkbox"
 								onclick="document.querySelectorAll('input[name=ids]').forEach(c=>c.checked=this.checked)"></th>
-							<th>S No.</th>
+							<th>#</th>
 							<th>ProductName</th>
 							<th>Product Category</th>
 							<th>Order Date</th>

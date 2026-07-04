@@ -27,7 +27,7 @@ String _suc = ServletUtility.getSuccessMessage(request);
 			<h5 class="mb-0 fw-bold">
 				<i class="bi bi-people-fill me-2"></i> User List
 			</h5>
-			<div class="d-flex gap-2">
+			<div class="d-flex gap-2">	
 				<a href="<%=ORSView.USER_REPORT_CTL%>" target="_blank"
 					class="btn btn-sm btn-warning fw-semibold"> <i
 					class="bi bi-file-earmark-pdf me-1"></i> Print PDF
@@ -125,16 +125,15 @@ String _suc = ServletUtility.getSuccessMessage(request);
 						<tr>
 							<td><input type="checkbox" name="ids"
 								value="<%=bean.getId()%>"
-								<%=(user.getId() == bean.getId() || bean.getRoleId() == RoleBean.ADMIN) ? "disabled" : "" %>></td>
+								<%=(user.getId() == bean.getId() || bean.getRoleId() == RoleBean.ADMIN) ? "disabled" : ""%>></td>
 							<td class="text-muted small"><%=index++%></td>
 							<td class="fw-semibold"><%=bean.getFirstName()%></td>
 							<td><%=bean.getLastName()%></td>
 							<td><%=bean.getLogin()%></td>
 							<td><%=bean.getGender()%></td>
 							<td class="text-muted small"><%=bean.getDob()%></td>
-							<td ><%=roleBean.getName() %></td>
-							
-							<td><a href="UserCtl?id=<%=bean.getId()%>
+							<td><%=roleBean.getName() %></td>
+							<td><a href="UserCtl?id=<%=bean.getId()%>"
 							<%=(user.getId() == bean.getId() || bean.getRoleId() == RoleBean.ADMIN) ? "onclick='return false;'" : "" %>
 								class="btn btn-sm btn-outline-primary"> <i
 									class="bi bi-pencil"></i> Edit

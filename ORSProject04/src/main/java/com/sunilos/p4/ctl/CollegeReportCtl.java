@@ -25,7 +25,6 @@ public class CollegeReportCtl extends BaseReportCtl<CollegeBean> {
      */
     public List<CollegeBean> getList() {
         CollegeModel model = new CollegeModel();
-        @SuppressWarnings("unchecked")
         List<CollegeBean> colleges = model.list();
         return colleges;
     }

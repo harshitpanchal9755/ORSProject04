@@ -47,7 +47,7 @@ public class EmployeeCtl extends BaseCtl<EmployeeBean, EmployeeModel>{
 		bean.setCompany(DataUtility.getStringData(request.getParameter("company")));
 		bean.setSalary(DataUtility.getStringData(request.getParameter("salary")));
 		bean.setDob(DataUtility.getDate(request.getParameter("dob")));
-		
+		System.out.println("Dob bean " + bean.getDob());
 		populateDTO(bean, request);
 		return bean;
 	}
@@ -55,19 +55,20 @@ public class EmployeeCtl extends BaseCtl<EmployeeBean, EmployeeModel>{
 	@Override
 	protected String getView() {
 		// TODO Auto-generated method stub
-		return null;
+		return ORSView.EMPLOYEE_VIEW;
 	}
 
 	@Override
 	protected String getView(String op) {
-		// TODO Auto-generated method stub
-		return null;
+		if(OP_CANCEL.equalsIgnoreCase(op) || OP_DELETE.equalsIgnoreCase(op)) {
+			return ORSView.EMPLOYEE_LIST_CTL;
+		}
+		return ORSView.EMPLOYEE_VIEW;
 	}
 
 	@Override
 	protected EmployeeModel getModel() {
-		// TODO Auto-generated method stub
-		return null;
+		return new EmployeeModel();
 	}
 	
 

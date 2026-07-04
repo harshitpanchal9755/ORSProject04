@@ -20,7 +20,7 @@ import com.sunilos.p4.util.JDBCDataSource;
  * It contains generalized methods for a Model class. �All Model classes in the
  * application must inherit BasModel class.
  * 
- * @author Sunil Sahu
+ * @author Harshit
  *
  * @param <T>
  */
@@ -264,7 +264,7 @@ public abstract class BaseModel<T extends BaseBean> {
 			rs.close();
 		} catch (Exception e) {
 			log.error("Database Exception..", e);
-			throw new ApplicationException("Exception : Exception in search Student");
+			throw new ApplicationException("Exception : Exception in search" + e.getMessage());
 		} finally {
 			JDBCDataSource.closeConnection(conn);
 		}

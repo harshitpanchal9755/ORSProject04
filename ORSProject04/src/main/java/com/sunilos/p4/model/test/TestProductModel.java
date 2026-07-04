@@ -9,13 +9,38 @@ import java.util.List;
 import com.sunilos.p4.bean.ProductBean;
 import com.sunilos.p4.model.ProductModel;
 import com.sunilos.p4.util.DataUtility;
+import com.sunilos.p4.util.JDBCDataSource;
 
 public class TestProductModel {
 
 	public static void main(String[] args) {
 
 //		testAdd();
-		testSearch();
+//		testSearch();
+		testupdate();
+
+	}
+
+	private static void testupdate() {
+		ProductModel model = new ProductModel();
+
+		ProductBean bean = model.findByPK(1L);
+
+		if (bean == null) {
+			System.out.println("No record Found");
+
+		}
+
+		try {
+			bean.setProductName("Car");
+			bean.setProductCategory("bmw");
+			bean.setPrice(100000000);
+			model.update(bean);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		}
 
 	}
 
@@ -26,7 +51,7 @@ public class TestProductModel {
 		ProductBean bean = new ProductBean();
 
 		bean.setProductName("abc");
-		
+
 		ProductModel model = new ProductModel();
 
 		list = model.search(bean, 1, 10);

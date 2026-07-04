@@ -21,6 +21,10 @@ public class EmployeeModel extends BaseModel<EmployeeBean> {
 		int pk = 0;
 
 		EmployeeBean existBean = findByEmployeeName(bean.getEmployeeName());
+		
+		if(existBean != null) {
+			throw new DuplicateRecordException("Employee Already Exists");
+		}
 		try {
 			conn = JDBCDataSource.getConnection();
 			conn.setAutoCommit(false);
@@ -66,11 +70,17 @@ public class EmployeeModel extends BaseModel<EmployeeBean> {
 	public void update(EmployeeBean bean) throws ApplicationException, DuplicateRecordException {
 		Connection conn = null;
 		System.out.println("update is start");
+		
+		EmployeeBean existBean = findByEmployeeName(bean.getEmployeeName());
+		
+		if(existBean != null && existBean.getId() != bean.getId()) {
+			throw new DuplicateRecordException("Employee Already Exist");
+		}
 		try {
 			conn = JDBCDataSource.getConnection();
 			conn.setAutoCommit(false);
 			PreparedStatement pstmt = conn.prepareStatement(
-					"update employee set employeename = ?, company = ?, salary = ?, dob = ?, created_by = ?, modified_by = ?, created_datetime = ?, modified_datetime = ? where id = ? ");
+					"UPDATE " + getTable() +  " SET employeename = ?, company = ?, salary = ?, dob = ?, created_by = ?, modified_by = ?, created_datetime = ?, modified_datetime = ? where id = ? ");
 			pstmt.setString(1, bean.getEmployeeName());
 			pstmt.setString(2, bean.getCompany());
 			pstmt.setString(3, bean.getSalary());
@@ -107,6 +117,11 @@ public class EmployeeModel extends BaseModel<EmployeeBean> {
 		if (bean.getId() > 0) {
 			sql.append(" AND ID = " + bean.getId());
 
+		}
+		
+		if(bean.getEmployeeName() != null && bean.getEmployeeName().length() > 0) {
+			sql.append(" AND EMPLOYEENAME LIKE '" + bean.getEmployeeName() + "%'");
+			
 		}
 
 		if (bean.getCompany() != null && bean.getCompany().length() > 0) {

@@ -144,16 +144,18 @@ genderMap.put("F", "Female");
 					if (bean.getId() > 0) {
 					%>
 					<button type="submit" name="operation"
-						value="<%=BaseCtl.OP_DELETE%>" class="btn btn-danger"
-						onclick="return confirm('Delete this user?')">
-						<i class="bi bi-trash me-1"></i> Delete
+						value="<%=BaseCtl.OP_CANCEL%>" class="btn btn-danger ms-auto">
+						<i class="bi bi-x-circle me-1"></i> Cancel
 					</button>
+					<%
+					} else {
+					%>
+					<a href="UserCtl" class="btn btn-secondary ms-auto"> <i
+						cllass="bi bi-arrow-clockwise me-1"></i> Reset
+					</a>
 					<%
 					}
 					%>
-					<a href="UserListCtl?id=0" class="btn btn-secondary ms-auto"> <i
-						class="bi bi-x-circle me-1"></i> Cancel
-					</a>
 				</div>
 			</form>
 		</div>

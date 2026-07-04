@@ -1,6 +1,8 @@
 package com.sunilos.p4.model;
 
 import java.sql.Connection;
+
+import java.sql.Date;
 import java.sql.PreparedStatement;
 
 import com.sunilos.p4.bean.ProductBean;
@@ -64,7 +66,47 @@ public class ProductModel extends BaseModel<ProductBean> {
 
 	@Override
 	public void update(ProductBean bean) throws ApplicationException, DuplicateRecordException {
-		// TODO Auto-generated method stub
+		log.debug("product is start");
+		Connection conn = null;
+
+		ProductBean existbean = findByProductName(bean.getProductName());
+
+		if (existbean != null && existbean.getId() != bean.getId()) {
+			throw new DuplicateRecordException("productName already exists");
+		}
+
+		try {
+			conn = JDBCDataSource.getConnection();
+			conn.setAutoCommit(false);
+			PreparedStatement pstmt = conn.prepareStatement("UPDATE " + getTable()
+					+ " SET PRODUCT_NAME = ?, PRODUCT_CATEGORY = ?, ORDER_DATE = ?, PRICE = ?, CREATED_BY = ?, MODIFIED_BY = ?, CREATED_DATETIME = ?, MODIFIED_DATETIME = ? WHERE ID = ?");
+			pstmt.setString(1, bean.getProductName());
+			pstmt.setString(2, bean.getProductCategory());
+			pstmt.setDate(3, new java.sql.Date(bean.getOrderDate().getTime()));
+			pstmt.setInt(4, bean.getPrice());
+			pstmt.setString(5, bean.getCreatedBy());
+			pstmt.setString(6, bean.getModifiedBy());
+			pstmt.setTimestamp(7, bean.getCreatedDatetime());
+			pstmt.setTimestamp(8, bean.getModifiedDatetime());
+			pstmt.setLong(9, bean.getId());
+			pstmt.executeUpdate();
+			conn.commit();
+			pstmt.close();
+
+		} catch (Exception e) {
+
+			try {
+				conn.rollback();
+
+			} catch (Exception ex) {
+				throw new ApplicationException("Exception is rollback" + e.getMessage());
+
+			}
+			throw new ApplicationException("Exception is product add" + e.getMessage());
+
+		} finally {
+			JDBCDataSource.closeConnection(conn);
+		}
 
 	}
 

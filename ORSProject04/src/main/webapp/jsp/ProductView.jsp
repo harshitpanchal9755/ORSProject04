@@ -75,7 +75,7 @@ String _err = ServletUtility.getErrorMessage(request);
 						class="text-danger">*</span></label> <input type="text" name="orderDate"
 						id="udate" readonly="readonly" class="form-control"
 						maxlength="200"
-						value="<%=DataUtility.getStringData(bean.getOrderDate())%>">
+						value="<%=DataUtility.getDateString(bean.getOrderDate())%>">
 					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("orderDate", request)%></div>
 				</div>
 
@@ -92,6 +92,21 @@ String _err = ServletUtility.getErrorMessage(request);
 						class="btn btn-primary">
 						<i class="bi bi-save me-1"></i> Save
 					</button>
+
+					<%
+					if (bean.getId() > 0) {
+					%>
+					<button type="submit" name="operation"
+						value="<%=BaseCtl.OP_DELETE%>" class="btn btn-danger"
+						onclick="return confirm('Delete this Product ?')">
+						<i class="bi bi-trash me-1"></i> Delete</i>
+					</button>
+					<%
+					}
+					%>
+					<a href="<%=ORSView.PRODUCT_LIST_CTL%>"
+						class="btn btn-secondary ms-auto"> <i
+						class="bi bi-x-circle me-1"></i> Cancel </a>
 				</div>
 			</form>
 		</div>

@@ -27,9 +27,9 @@ public class TestEmployeeModel {
 				return;
 			}
 
-			bean.setEmployeeName("ritik");
-			bean.setCompany("wipro");
-			bean.setSalary("9000000");
+			bean.setEmployeeName("HarshitPanchal");
+			bean.setCompany("Deloite");
+			bean.setSalary("200000");
 			bean.setDob(new java.util.Date());
 
 			model.update(bean);

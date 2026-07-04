@@ -4,11 +4,31 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 
+/**
+ * @author Rays Technologies
+ * @version 1.0
+ * @copy (c) Rays Technologies
+ */
 public class ProductBean extends BaseBean {
 
+	/**
+	 * store the productName
+	 */
 	private String productName;
+	
+	/**
+	 * store the category of product
+	 */
 	private String productCategory;
+	
+	/**
+	 * store the date of orderdate
+	 */
 	private Date orderDate;
+	
+	/**
+	 * store of price of productName
+	 */
 	private int price;
 
 	public String getProductName() {

@@ -30,7 +30,7 @@ public class DataValidator {
 	public static boolean isNotNull(String val) {
 		return !isNull(val);
 	}
-
+	
 	/**
 	 * Checks if value is an Integer
 	 */

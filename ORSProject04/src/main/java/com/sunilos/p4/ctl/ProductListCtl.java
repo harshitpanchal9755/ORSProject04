@@ -27,7 +27,7 @@ public class ProductListCtl extends BaseListCtl<ProductBean, ProductModel> {
 
 	@Override
 	protected String getView() {
-		return ORSView.PRODUCT_VIEW;
+		return ORSView.PRODUCT_LIST_VIEW;
 	}
 
 	@Override

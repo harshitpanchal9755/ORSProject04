@@ -11,9 +11,6 @@ public class EmployeeBean extends BaseBean {
 	private String salary;
 	private Date dob;
 
-	
-
-
 	public String getEmployeeName() {
 		return employeeName;
 	}
@@ -50,7 +47,7 @@ public class EmployeeBean extends BaseBean {
 	public void setResultset(ResultSet rs) {
 		super.setResultset(rs);
 		try {
-			this.setEmployeeName("employeename");
+			this.setEmployeeName(rs.getString("employeename"));
 			this.setCompany(rs.getString("company"));
 			this.setSalary(rs.getString("salary"));
 			this.setDob(rs.getDate("dob"));
