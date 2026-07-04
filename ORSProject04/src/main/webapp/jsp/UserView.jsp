@@ -125,7 +125,7 @@ genderMap.put("F", "Female");
 					<label class="form-label fw-semibold">Date of Birth
 						(mm/dd/yyyy)</label>
 					<div class="input-group">
-						<input type="text" name="dob" id="udatee" class="form-control"
+						<input type="text" name="dob" id="udate" class="form-control"
 							placeholder="Select date of birth" readonly
 							value="<%=DataUtility.getDateString(bean.getDob())%>"> <a
 							class="btn btn-outline-secondary"> <img src="../img/cal.jpg"
@@ -150,7 +150,7 @@ genderMap.put("F", "Female");
 					<%
 					} else {
 					%>
-					<a href="UserCtl" class="btn btn-secondary ms-auto"> <i
+					<a href="UserCtl" class="btn btn-danger ms-auto"> <i
 						cllass="bi bi-arrow-clockwise me-1"></i> Reset
 					</a>
 					<%

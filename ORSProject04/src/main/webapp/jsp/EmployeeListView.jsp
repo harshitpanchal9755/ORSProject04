@@ -25,10 +25,10 @@ String _suc = ServletUtility.getSuccessMessage(request);
 				<i class="bi bi-mortarboard-fill me-2"></i> Employee List
 			</h5>
 			<div class="d-flex gap-2">
-				<a href="<%=ORSView.EMPLOYEE_REPORT_CTL %>" target="_blank"
+				<a href="<%=ORSView.EMPLOYEE_REPORT_CTL %>" target="blank"
 					class="btn btn-sm btn-warning fw-semibold"> <i
 					class="bi bi-file-earmark-pdf me-1"></i> Print PDF
-				</a> <a href="<%=ORSView.EMPLOYEE_REPORT_CTL %>?type=doc" target="_blank"
+				</a> <a href="<%=ORSView.EMPLOYEE_REPORT_CTL %>?type=doc" target="blank"
 					class="btn btn-sm btn-info fw-semibold"> <i
 					class="bi bi-file-earmark-word me-1"></i> Print DOC
 				</a> <a href="EmployeeCtl"
@@ -61,7 +61,7 @@ String _suc = ServletUtility.getSuccessMessage(request);
 					<i class="bi bi-search me-1"></i> Search
 				</button>
 				
-				<a href="<%=ORSView.EMPLOYEE_LIST_CTL%>" class="btn btn-secondary me-1">
+				<a href="<%=ORSView.EMPLOYEE_LIST_CTL%>" class="btn btn-danger me-1">
 				<i class="bi bi-arrow-clockwise"></i> Reset</a>
 				
 				<button type="submit" name="operation"
