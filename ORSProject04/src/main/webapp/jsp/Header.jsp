@@ -21,7 +21,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 		<a class="navbar-brand fw-bold d-flex align-items-center gap-2 py-2"
 			href="<%=ORSView.WELCOME_CTL%>"> <img
 			src="<%=ORSView.APP_CONTEXT%>/img/customLogo.jpg" alt="ORS"
-			height="34" class="rounded" style="object-fit: contain;"> <span>ORS</span>
+			height="34" class="rounded" style="object-fit: contain;"> <span><%=ms.get("header.ors") %></span>
 		</a>
 
 		<!-- Mobile toggler -->
@@ -43,7 +43,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle px-3 py-3" href="#"
 					data-bs-toggle="dropdown"> <i
-						class="bi bi-file-earmark-text me-1"></i> Marksheet
+						class="bi bi-file-earmark-text me-1"></i> <%=ms.get("header.mark")%>
 				</a>
 					<ul
 						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3"
@@ -93,7 +93,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle px-3 py-3" href="#"
 					data-bs-toggle="dropdown"> <i class="bi bi-mortarboard me-1"></i>
-						Academics
+						<%=ms.get("header.acd") %>
 				</a>
 					<ul
 						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3"
@@ -150,7 +150,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle px-3 py-3" href="#"
 					data-bs-toggle="dropdown" aria-expanded="false"> <i
-						class="bi bi-people me-1"></i> People
+						class="bi bi-people me-1"></i> <%=ms.get("header.people") %>
 				</a>
 					<ul
 						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3 overflow-auto"
@@ -260,7 +260,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle px-3 py-3" href="#"
 					data-bs-toggle="dropdown" aria-expanded="false"> <i
-						class="bi bi-file-earmark-bar-graph me-1"></i> Reports
+						class="bi bi-file-earmark-bar-graph me-1"></i> <%=ms.get("header.rep") %>
 				</a>
 					<ul
 						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3"
@@ -337,7 +337,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle px-3 py-3" href="#"
 					data-bs-toggle="dropdown" aria-expanded="false"> <i
-						class="bi bi-journal-bookmark-fill"></i> Daily Module
+						class="bi bi-journal-bookmark-fill"></i> <%=ms.get("header.module") %>
 				</a>
 					<ul
 						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3 overflow-auto"
@@ -455,10 +455,10 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 							style="width: 120px; background: rgba(255, 255, 255, 0.12); color: #fff; font-size: 0.82rem; cursor: pointer;">
 							<option value="en" <%=("en".equals(locale)) ? "selected" : ""%>
 								style="background: #0d2137; color: #fff;">&#127758;
-								English</option>
+								<%=ms.get("header.en") %></option>
 							<option value="hi" <%=("hi".equals(locale)) ? "selected" : ""%>
 								style="background: #0d2137; color: #fff;">&#127470;&#127475;
-								Hindi</option>
+								<%=ms.get("header.hi") %></option>
 						</select>
 					</form>
 				</li>
@@ -523,7 +523,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 				<li class="nav-item"><a
 					class="btn btn-sm btn-outline-light ms-1 px-3"
 					href="<%=ORSView.LOGIN_CTL%>"> <i
-						class="bi bi-box-arrow-in-right me-1"></i> Login
+						class="bi bi-box-arrow-in-right me-1"></i> <%=ms.get("header.login") %>
 				</a></li>
 				<%
 				}

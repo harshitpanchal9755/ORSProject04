@@ -51,6 +51,8 @@ String _err = ServletUtility.getErrorMessage(request);
 					value="<%=BaseCtl.OP_SEARCH%>" class="btn btn-primary btn-sm">
 					<i class="bi bi-search me-1"></i> <%=ms.get("PgHostel.search") %> <!-- Internationalization in hi - eng  use  -->
 				</button>
+				<a href="<%=ORSView.PGHOSTEL_LIST_CTL %>" class="btn btn-danger">
+				<i class="bi bi-arrow.clockwise"></i>Reset</a>
 				<button type="submit" name="operation"
 					value="<%=BaseCtl.OP_DELETE%>"
 					class="btn btn-danger btn-sm ms-auto">
