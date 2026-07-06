@@ -88,15 +88,15 @@ String _err = ServletUtility.getErrorMessage(request);
 
 				<div class="d-flex gap-2 pt-2 border-top">
 					<button type="submit" name="operation" value="<%=BaseCtl.OP_SAVE%>"
-						class="btn btn-primary me-1">
-						<i class="bi bi-save me-2"></i> Save
+						class="btn btn-primary">
+						<i class="bi bi-save me-1"></i> Save
 					</button>
 
-					<a href="<%=ORSView.EMPLOYEE_CTL%>" class="btn btn-danger me-1">
+					<a href="<%=ORSView.EMPLOYEE_CTL%>" class="btn btn-danger" >
 						<i class="bi bi-arrow-clockwise me-1"></i> Reset
 					</a> <a href="<%=ORSView.EMPLOYEE_LIST_CTL%>"
 						class="btn btn-secondary ms-auto"> <i
-						class="bi bi-x-circle me-2"></i> Cancel
+						class="bi bi-x-circle me-1"></i> Cancel
 					</a>
 				</div>
 			</form>

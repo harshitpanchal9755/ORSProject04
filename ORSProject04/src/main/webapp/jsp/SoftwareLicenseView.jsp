@@ -95,7 +95,7 @@ String _err = ServletUtility.getErrorMessage(request);
 					</button>
 
 					<a href="<%=ORSView.SOFTWARELICENSE_CTL%>"
-						class="btn btn-danger me-1"> <i class="bi bi-arrow-clockwise"></i>
+						class="btn btn-danger"> <i class="bi bi-arrow-clockwise me-1"></i>
 						Reset
 					</a> <a href="<%=ORSView.SOFTWARELICENSE_LIST_CTL%>"
 						class="btn btn-secondary ms-auto"> <i

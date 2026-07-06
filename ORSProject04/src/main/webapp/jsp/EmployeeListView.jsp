@@ -61,7 +61,7 @@ String _suc = ServletUtility.getSuccessMessage(request);
 					<i class="bi bi-search me-1"></i> Search
 				</button>
 				
-				<a href="<%=ORSView.EMPLOYEE_LIST_CTL%>" class="btn btn-danger me-1">
+				<a href="<%=ORSView.EMPLOYEE_LIST_CTL%>" class="btn btn-danger btn-sm">
 				<i class="bi bi-arrow-clockwise"></i> Reset</a>
 				
 				<button type="submit" name="operation"

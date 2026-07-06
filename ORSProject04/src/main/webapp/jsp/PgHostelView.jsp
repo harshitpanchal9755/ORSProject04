@@ -99,8 +99,8 @@ String _err = ServletUtility.getErrorMessage(request);
 						<i class="bi bi-save me-1"></i><%=ms.get("PgHostel.save") %>
 					</button>
 
-					<a href="<%=ORSView.PGHOSTEL_CTL%>" class="btn btn-danger me-1">
-						<i class="bi bi-arrow-clockwise"></i> <%=ms.get("PgHostel.reset") %>
+					<a href="<%=ORSView.PGHOSTEL_CTL%>" class="btn btn-danger ">
+						<i class="bi bi-arrow-clockwise me-1"></i> <%=ms.get("PgHostel.reset") %>
 					</a> <a href="<%=ORSView.PGHOSTEL_LIST_CTL%>"
 						class="btn btn-secondary ms-auto"> <i
 						class="bi bi-x-circle me-1"></i><%=ms.get("PgHostel.cancel") %>

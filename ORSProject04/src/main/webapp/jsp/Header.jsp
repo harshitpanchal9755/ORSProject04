@@ -21,7 +21,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 		<a class="navbar-brand fw-bold d-flex align-items-center gap-2 py-2"
 			href="<%=ORSView.WELCOME_CTL%>"> <img
 			src="<%=ORSView.APP_CONTEXT%>/img/customLogo.jpg" alt="ORS"
-			height="34" class="rounded" style="object-fit: contain;"> <span><%=ms.get("header.ors") %></span>
+			height="34" class="rounded" style="object-fit: contain;"> <span><%=ms.get("header.ors")%></span>
 		</a>
 
 		<!-- Mobile toggler -->
@@ -50,16 +50,15 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						style="min-width: 200px; background: #1a2e4a;">
 						<li>
 							<h6 class="dropdown-header text-uppercase text-info small">
-								<i class="bi bi-search me-1"></i> Query
+								<i class="bi bi-search me-1"></i> <%=ms.get("header.query") %>
 							</h6>
 						</li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.GET_MARKSHEET_CTL%>"> <i
-								class="bi bi-search me-2 text-info"></i> Get Marksheet
-						</a></li>
+								class="bi bi-search me-2 text-info"></i>  <%=ms.get("header.getmark") %>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.MARKSHEET_MERIT_LIST_CTL%>"> <i
-								class="bi bi-trophy me-2 text-warning"></i> Merit List
+								class="bi bi-trophy me-2 text-warning"></i> <%=ms.get("header.merit") %>
 						</a></li>
 						<%
 						if (isAdmin) {
@@ -69,16 +68,16 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						</li>
 						<li>
 							<h6 class="dropdown-header text-uppercase text-info small">
-								<i class="bi bi-gear me-1"></i> Manage
+								<i class="bi bi-gear me-1"></i> <%=ms.get("header.mang") %>
 							</h6>
 						</li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.MARKSHEET_CTL%>"> <i
-								class="bi bi-plus-circle me-2 text-success"></i> Add Marksheet
+								class="bi bi-plus-circle me-2 text-success"></i> <%=ms.get("header.addmark") %>
 						</a></li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.MARKSHEET_LIST_CTL%>"> <i
-								class="bi bi-list-ul me-2 text-primary"></i> Marksheet List
+								class="bi bi-list-ul me-2 text-primary"></i> <%=ms.get("header.marklist") %>
 						</a></li>
 
 						<%
@@ -93,7 +92,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle px-3 py-3" href="#"
 					data-bs-toggle="dropdown"> <i class="bi bi-mortarboard me-1"></i>
-						<%=ms.get("header.acd") %>
+						<%=ms.get("header.acd")%>
 				</a>
 					<ul
 						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3"
@@ -150,7 +149,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle px-3 py-3" href="#"
 					data-bs-toggle="dropdown" aria-expanded="false"> <i
-						class="bi bi-people me-1"></i> <%=ms.get("header.people") %>
+						class="bi bi-people me-1"></i> <%=ms.get("header.people")%>
 				</a>
 					<ul
 						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3 overflow-auto"
@@ -260,7 +259,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle px-3 py-3" href="#"
 					data-bs-toggle="dropdown" aria-expanded="false"> <i
-						class="bi bi-file-earmark-bar-graph me-1"></i> <%=ms.get("header.rep") %>
+						class="bi bi-file-earmark-bar-graph me-1"></i> <%=ms.get("header.rep")%>
 				</a>
 					<ul
 						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3"
@@ -269,7 +268,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						<!-- Academics -->
 						<li>
 							<h6 class="dropdown-header text-uppercase text-warning small">
-								<i class="bi bi-mortarboard me-1"></i> Academics
+								<i class="bi bi-mortarboard me-1"></i> <%=ms.get("hader.acd") %>
 							</h6>
 						</li>
 						<li><a class="dropdown-item"
@@ -337,7 +336,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle px-3 py-3" href="#"
 					data-bs-toggle="dropdown" aria-expanded="false"> <i
-						class="bi bi-journal-bookmark-fill"></i> <%=ms.get("header.module") %>
+						class="bi bi-journal-bookmark-fill"></i> <%=ms.get("header.module")%>
 				</a>
 					<ul
 						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3 overflow-auto"
@@ -411,18 +410,19 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 
 						<li>
 							<h6 class="dropdown-header text-uppercae text-info small">
-								<i class="bi bi-hospital me-1 "></i> Hospital 
+								<i class="bi bi-hospital me-1 "></i> Hospital
 							</h6>
 						</li>
 
 						<li><a class="dropdown-item" href="<%=ORSView.HOSPITAL_CTL%>"><i
-								class="bi bi-clipboard2-plus-fill me=2 text-success"></i> Add Hospital</li>
+								class="bi bi-clipboard2-plus-fill me=2 text-success"></i> Add
+								Hospital</li>
 						</a>
 
 
 						<li><a class="dropdown-item"
-							href="<%=ORSView.HOSPITAL_LIST_CTL%>"> <i class="bi bi-list-check me-2 text-success"></i>
-								HospitalList </li>
+							href="<%=ORSView.HOSPITAL_LIST_CTL%>"> <i
+								class="bi bi-list-check me-2 text-success"></i> HospitalList </li>
 						</a>
 
 						<li><hr class="dropdown-divider border-secondary"></li>
@@ -447,7 +447,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 			<!-- ===== Right side ===== -->
 			<ul class="navbar-nav align-items-lg-center gap-1 ms-2">
 
-				<!-- Language -->	
+				<!-- Language -->
 				<li class="nav-item">
 					<form class="d-flex align-items-center m-0">
 						<select class="form-select form-select-sm border-0 py-1"
@@ -455,10 +455,10 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 							style="width: 120px; background: rgba(255, 255, 255, 0.12); color: #fff; font-size: 0.82rem; cursor: pointer;">
 							<option value="en" <%=("en".equals(locale)) ? "selected" : ""%>
 								style="background: #0d2137; color: #fff;">&#127758;
-								<%=ms.get("header.en") %></option>
+								<%=ms.get("header.en")%></option>
 							<option value="hi" <%=("hi".equals(locale)) ? "selected" : ""%>
 								style="background: #0d2137; color: #fff;">&#127470;&#127475;
-								<%=ms.get("header.hi") %></option>
+								<%=ms.get("header.hi")%></option>
 						</select>
 					</form>
 				</li>
@@ -523,7 +523,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 				<li class="nav-item"><a
 					class="btn btn-sm btn-outline-light ms-1 px-3"
 					href="<%=ORSView.LOGIN_CTL%>"> <i
-						class="bi bi-box-arrow-in-right me-1"></i> <%=ms.get("header.login") %>
+						class="bi bi-box-arrow-in-right me-1"></i> <%=ms.get("header.login")%>
 				</a></li>
 				<%
 				}
