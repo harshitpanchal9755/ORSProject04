@@ -54,16 +54,16 @@ String _err = ServletUtility.getErrorMessage(request);
 
 				<div class="mb-3">
 					<label class="form-label fw-semibold">Name <span
-						class="text-danger">*</span></label> <input type="text" name="name" placeholder="Enter Role Name"
-						class="form-control"
+						class="text-danger">*</span></label> <input type="text" name="name"
+						placeholder="Enter Role Name" class="form-control"
 						value="<%=DataUtility.getStringData(bean.getName())%>">
 					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("name", request)%></div>
 				</div>
 
 				<div class="mb-4">
 					<label class="form-label fw-semibold">Description <span
-						class="text-danger">*</span></label> <input type="text" name="description" placeholder="Enter Role Description"
-						class="form-control"
+						class="text-danger">*</span></label> <input type="text" name="description"
+						placeholder="Enter Role Description" class="form-control"
 						value="<%=DataUtility.getStringData(bean.getDescription())%>">
 					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("description", request)%></div>
 				</div>

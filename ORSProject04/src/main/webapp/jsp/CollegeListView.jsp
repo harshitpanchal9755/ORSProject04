@@ -73,7 +73,7 @@ String _suc = ServletUtility.getSuccessMessage(request);
 			<%
 			}
 			%>
-			
+
 			<%
 			if (_suc != null && !_suc.isEmpty()) {
 			%>

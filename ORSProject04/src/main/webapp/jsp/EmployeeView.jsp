@@ -92,8 +92,8 @@ String _err = ServletUtility.getErrorMessage(request);
 						<i class="bi bi-save me-1"></i> Save
 					</button>
 
-					<a href="<%=ORSView.EMPLOYEE_CTL%>" class="btn btn-danger" >
-						<i class="bi bi-arrow-clockwise me-1"></i> Reset
+					<a href="<%=ORSView.EMPLOYEE_CTL%>" class="btn btn-danger"> <i
+						class="bi bi-arrow-clockwise me-1"></i> Reset
 					</a> <a href="<%=ORSView.EMPLOYEE_LIST_CTL%>"
 						class="btn btn-secondary ms-auto"> <i
 						class="bi bi-x-circle me-1"></i> Cancel

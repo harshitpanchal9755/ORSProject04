@@ -19,15 +19,17 @@ String _err = ServletUtility.getErrorMessage(request);
 			class="card-header text-white border-0 py-3 px-4 d-flex justify-content-between align-items-center"
 			style="background: linear-gradient(135deg, #0d2137 0%, #1565c0 100%);">
 			<h5 class="mb-0 fw-bold">
-				<i class="bi bi-cart me-2"></i><%=ms.get("PgHostel.list") %> <!-- Internationalization in hi - eng  use  -->
+				<i class="bi bi-cart me-2"></i><%=ms.get("PgHostel.list") %>
+				<!-- Internationalization in hi - eng  use  -->
 			</h5>
 			<div class="d-flex gap-2">
 				<a href="<%=ORSView.PGHOSTEL_REPORT_CTL %>" target="_blank"
 					class="btn btn-sm btn-warning fw-semibold"> <i
 					class="bi bi-file-earmark-pdf me-1"></i> <%=ms.get("PgHostel.pdf") %>
-				</a> <a href="<%=ORSView.PGHOSTEL_REPORT_CTL %>?type=doc" target="_blank"
-					class="btn btn-sm btn-info fw-semibold"> <i
-					class="bi bi-file-earmark-word me-1"></i> <%=ms.get("PgHostel.doc") %> <!-- Internationalization in hi - eng  use  -->
+				</a> <a href="<%=ORSView.PGHOSTEL_REPORT_CTL %>?type=doc"
+					target="_blank" class="btn btn-sm btn-info fw-semibold"> <i
+					class="bi bi-file-earmark-word me-1"></i> <%=ms.get("PgHostel.doc") %>
+					<!-- Internationalization in hi - eng  use  -->
 				</a> <a href="PgHostelCtl" target="_blank"
 					class="btn btn-sm btn-light text-primary fw-semibold"> <i
 					class="bi bi-cart me-1"></i><%=ms.get("PgHostel.add") %> <!-- Internationalization in hi - eng  use  -->
@@ -49,14 +51,19 @@ String _err = ServletUtility.getErrorMessage(request);
 
 				<button type="submit" name="operation"
 					value="<%=BaseCtl.OP_SEARCH%>" class="btn btn-primary btn-sm">
-					<i class="bi bi-search me-1"></i> <%=ms.get("PgHostel.search") %> <!-- Internationalization in hi - eng  use  -->
+					<i class="bi bi-search me-1"></i>
+					<%=ms.get("PgHostel.search") %>
+					<!-- Internationalization in hi - eng  use  -->
 				</button>
-				<a href="<%=ORSView.PGHOSTEL_LIST_CTL %>" class="btn btn-danger btn-sm">
-				<i class="bi bi-arrow-clockwise"></i>Reset</a>
+				<a href="<%=ORSView.PGHOSTEL_LIST_CTL %>"
+					class="btn btn-danger btn-sm"> <i class="bi bi-arrow-clockwise"></i>Reset
+				</a>
 				<button type="submit" name="operation"
 					value="<%=BaseCtl.OP_DELETE%>"
 					class="btn btn-danger btn-sm ms-auto">
-					<i class="bi bi-trash me-1"></i> <%=ms.get("PgHostel.delete") %>   <!-- Internationalization in hi - eng  use  -->
+					<i class="bi bi-trash me-1"></i>
+					<%=ms.get("PgHostel.delete") %>
+					<!-- Internationalization in hi - eng  use  -->
 				</button>
 			</div>
 

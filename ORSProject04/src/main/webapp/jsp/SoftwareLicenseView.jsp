@@ -73,8 +73,8 @@ String _err = ServletUtility.getErrorMessage(request);
 				<div class="mb-3">
 					<label class="form-label fw-semibold">ExpiryDate<span
 						class="text-danger">*</span></label> <input type="text" id="udate"
-						readonly="readonly" name="expiryDate" placeholder="Click Calendar" class="form-control"
-						maxlength="200"
+						readonly="readonly" name="expiryDate" placeholder="Click Calendar"
+						class="form-control" maxlength="200"
 						value="<%=DataUtility.getDateString(bean.getExpiryDate())%>">
 					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("expiryDate", request)%></div>
 				</div>
@@ -94,9 +94,8 @@ String _err = ServletUtility.getErrorMessage(request);
 						<i class="bi bi-save me-1"></i> Save
 					</button>
 
-					<a href="<%=ORSView.SOFTWARELICENSE_CTL%>"
-						class="btn btn-danger"> <i class="bi bi-arrow-clockwise me-1"></i>
-						Reset
+					<a href="<%=ORSView.SOFTWARELICENSE_CTL%>" class="btn btn-danger">
+						<i class="bi bi-arrow-clockwise me-1"></i> Reset
 					</a> <a href="<%=ORSView.SOFTWARELICENSE_LIST_CTL%>"
 						class="btn btn-secondary ms-auto"> <i
 						class="bi bi-x-circle me-1"></i>Cancel

@@ -55,32 +55,37 @@ String _err = ServletUtility.getErrorMessage(request);
 					value="<%=DataUtility.getTimestamp(bean.getModifiedDatetime())%>">
 
 				<div class="mb-3">
-					<label class="form-label fw-semibold"><%=ms.get("PgHostel.ownerName") %> <span
-						class="text-danger">*</span></label> <input type="text" name="ownerName"
-						placeholder="<%=ms.get("PgHostel.placeholder.OwnerName") %>" class="form-control" maxlength="100"
+					<label class="form-label fw-semibold"><%=ms.get("PgHostel.ownerName") %>
+						<span class="text-danger">*</span></label> <input type="text"
+						name="ownerName"
+						placeholder="<%=ms.get("PgHostel.placeholder.OwnerName") %>"
+						class="form-control" maxlength="100"
 						value="<%=DataUtility.getStringData(bean.getOwnerName())%>">
 					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("ownerName", request)%></div>
 				</div>
 
 				<div class="mb-3">
-					<label class="form-label fw-semibold"><%=ms.get("PgHostel.location") %> <span
-						class="text-danger">*</span></label> <input type="text" name="location"
-						placeholder="<%=ms.get("PgHostel.placeholder.Location") %>" class="form-control" maxlength="200"
+					<label class="form-label fw-semibold"><%=ms.get("PgHostel.location") %>
+						<span class="text-danger">*</span></label> <input type="text"
+						name="location"
+						placeholder="<%=ms.get("PgHostel.placeholder.Location") %>"
+						class="form-control" maxlength="200"
 						value="<%=DataUtility.getStringData(bean.getLocation())%>">
 					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("location", request)%></div>
 				</div>
 
 				<div class="mb-3">
-					<label class="form-label fw-semibold"><%=ms.get("PgHostel.rent") %> <span
-						class="text-danger">*</span></label> <input type="text" name="rent"
-						placeholder="<%=ms.get("PgHostel.placeholder.rent") %>" class="form-control" maxlength="200"
+					<label class="form-label fw-semibold"><%=ms.get("PgHostel.rent") %>
+						<span class="text-danger">*</span></label> <input type="text" name="rent"
+						placeholder="<%=ms.get("PgHostel.placeholder.rent") %>"
+						class="form-control" maxlength="200"
 						value="<%=DataUtility.getStringData(bean.getRent())%>">
 					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("rent", request)%></div>
 				</div>
 
 				<div class="mb-3">
-					<label class="form-label fw-semibold"><%=ms.get("PgHostel.roomType") %> <span
-						class="text-danger">*</span></label>
+					<label class="form-label fw-semibold"><%=ms.get("PgHostel.roomType") %>
+						<span class="text-danger">*</span></label>
 					<%
 					HashMap<String, String> map = new HashMap<String, String>();
 
@@ -99,8 +104,8 @@ String _err = ServletUtility.getErrorMessage(request);
 						<i class="bi bi-save me-1"></i><%=ms.get("PgHostel.save") %>
 					</button>
 
-					<a href="<%=ORSView.PGHOSTEL_CTL%>" class="btn btn-danger ">
-						<i class="bi bi-arrow-clockwise me-1"></i> <%=ms.get("PgHostel.reset") %>
+					<a href="<%=ORSView.PGHOSTEL_CTL%>" class="btn btn-danger "> <i
+						class="bi bi-arrow-clockwise me-1"></i> <%=ms.get("PgHostel.reset") %>
 					</a> <a href="<%=ORSView.PGHOSTEL_LIST_CTL%>"
 						class="btn btn-secondary ms-auto"> <i
 						class="bi bi-x-circle me-1"></i><%=ms.get("PgHostel.cancel") %>

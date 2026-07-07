@@ -50,37 +50,36 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						style="min-width: 200px; background: #1a2e4a;">
 						<li>
 							<h6 class="dropdown-header text-uppercase text-info small">
-								<i class="bi bi-search me-1"></i> <%=ms.get("header.query") %>
+								<i class="bi bi-search me-1"></i>
+								<%=ms.get("header.query") %>
 							</h6>
 						</li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.GET_MARKSHEET_CTL%>"> <i
-								class="bi bi-search me-2 text-info"></i>  <%=ms.get("header.getmark") %>
-						<li><a class="dropdown-item"
-							href="<%=ORSView.MARKSHEET_MERIT_LIST_CTL%>"> <i
-								class="bi bi-trophy me-2 text-warning"></i> <%=ms.get("header.merit") %>
-						</a></li>
-						<%
+								class="bi bi-search me-2 text-info"></i> <%=ms.get("header.getmark") %>
+								<li><a class="dropdown-item"
+									href="<%=ORSView.MARKSHEET_MERIT_LIST_CTL%>"> <i
+										class="bi bi-trophy me-2 text-warning"></i> <%=ms.get("header.merit") %>
+								</a></li> <%
 						if (isAdmin) {
 						%>
-						<li>
-							<hr class="dropdown-divider border-secondary">
-						</li>
-						<li>
-							<h6 class="dropdown-header text-uppercase text-info small">
-								<i class="bi bi-gear me-1"></i> <%=ms.get("header.mang") %>
-							</h6>
-						</li>
-						<li><a class="dropdown-item"
-							href="<%=ORSView.MARKSHEET_CTL%>"> <i
-								class="bi bi-plus-circle me-2 text-success"></i> <%=ms.get("header.addmark") %>
-						</a></li>
-						<li><a class="dropdown-item"
-							href="<%=ORSView.MARKSHEET_LIST_CTL%>"> <i
-								class="bi bi-list-ul me-2 text-primary"></i> <%=ms.get("header.marklist") %>
-						</a></li>
-
-						<%
+								<li>
+									<hr class="dropdown-divider border-secondary">
+							</li>
+								<li>
+									<h6 class="dropdown-header text-uppercase text-info small">
+										<i class="bi bi-gear me-1"></i>
+										<%=ms.get("header.mang") %>
+									</h6>
+							</li>
+								<li><a class="dropdown-item"
+									href="<%=ORSView.MARKSHEET_CTL%>"> <i
+										class="bi bi-plus-circle me-2 text-success"></i> <%=ms.get("header.addmark") %>
+								</a></li>
+								<li><a class="dropdown-item"
+									href="<%=ORSView.MARKSHEET_LIST_CTL%>"> <i
+										class="bi bi-list-ul me-2 text-primary"></i> <%=ms.get("header.marklist") %>
+								</a></li> <%
 						}
 						%>
 					</ul></li>
@@ -268,7 +267,8 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						<!-- Academics -->
 						<li>
 							<h6 class="dropdown-header text-uppercase text-warning small">
-								<i class="bi bi-mortarboard me-1"></i> <%=ms.get("hader.acd") %>
+								<i class="bi bi-mortarboard me-1"></i>
+								<%=ms.get("hader.acd") %>
 							</h6>
 						</li>
 						<li><a class="dropdown-item"
@@ -409,7 +409,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						<!-- Hospital -->
 
 						<li>
-							<h6 class="dropdown-header text-uppercae text-info small">
+							<h6 class="dropdown-header text-uppercase text-info small">
 								<i class="bi bi-hospital me-1 "></i> Hospital
 							</h6>
 						</li>
@@ -426,7 +426,25 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						</a>
 
 						<li><hr class="dropdown-divider border-secondary"></li>
-
+						
+						<!-- SmartParking -->
+						
+						<li>
+						
+						<h6 class="dropdown-item text-uppercase text-info small">
+						<i class="bi bi-p-circle me-1"></i> SmartParking
+						</h6></li>
+						
+						<li> <a class="dropdown-item" href="<%=ORSView.SMARTPARKING_CTL%>">
+						<i class="bi bi-p-square-fill me-2 text-success"></i>Add SmartParking</a>
+						</li>
+						
+						<li> <a class="dropdown-item" href="<%=ORSView.SMARTPARKING_LIST_CTL%>">
+						<i class="bi bi-p-square me-2 text-success"></i>SmartParkingList</a>
+						</li>
+						
+						<li><hr class="dropdown-divider border-secondary"></li>
+						
 					</ul></li>
 
 

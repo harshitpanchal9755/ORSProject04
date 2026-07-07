@@ -119,6 +119,13 @@ public interface ORSView {
 	public String HOSPITAL_LIST_CTL = APP_CONTEXT + "/ctl/HospitalListCtl";
 	public String HOSPITAL_LIST_VIEW = PAGE_FOLDER + "/HospitalListView.jsp";
 	
+	/////// ---- SmartParking ---- ///////
+	
+	public String SMARTPARKING_CTL = APP_CONTEXT + "/ctl/SmartParkingCtl";
+	public String SMARTPARKING_VIEW = PAGE_FOLDER + "/SmartParkingView.jsp";
+	public String SMARTPARKING_LIST_CTL = APP_CONTEXT + "/ctl/SmartParkingListCtl";
+	public String SMARTPARKING_LIST_VIEW = PAGE_FOLDER + "/SmartParkingListView.jsp";
+	
 	
 	////------ Report View ------- //////
 

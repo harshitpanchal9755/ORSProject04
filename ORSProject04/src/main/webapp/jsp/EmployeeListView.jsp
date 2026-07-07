@@ -44,13 +44,13 @@ String _suc = ServletUtility.getSuccessMessage(request);
 
 			<div
 				class="p-3 bg-light border-bottom d-flex flex-wrap gap-2 align-items-center">
-				
+
 				<input type="text" name="employeeName"
 					class="form-control form-control-sm" style="max-width: 160px;"
 					placeholder="Enter EmployeeName"
 					value="<%=ServletUtility.getParameter("employeeName", request)%>">
-					
-					<input type="text" name="company"
+
+				<input type="text" name="company"
 					class="form-control form-control-sm" style="max-width: 160px;"
 					placeholder="Enter Company"
 					value="<%=ServletUtility.getParameter("company", request)%>">
@@ -60,10 +60,12 @@ String _suc = ServletUtility.getSuccessMessage(request);
 					value="<%=BaseCtl.OP_SEARCH%>" class="btn btn-primary btn-sm">
 					<i class="bi bi-search me-1"></i> Search
 				</button>
-				
-				<a href="<%=ORSView.EMPLOYEE_LIST_CTL%>" class="btn btn-danger btn-sm">
-				<i class="bi bi-arrow-clockwise"></i> Reset</a>
-				
+
+				<a href="<%=ORSView.EMPLOYEE_LIST_CTL%>"
+					class="btn btn-danger btn-sm"> <i class="bi bi-arrow-clockwise"></i>
+					Reset
+				</a>
+
 				<button type="submit" name="operation"
 					value="<%=BaseCtl.OP_DELETE%>"
 					class="btn btn-danger btn-sm ms-auto">

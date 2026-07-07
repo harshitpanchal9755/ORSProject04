@@ -6,7 +6,7 @@
 <%@page import="java.util.List"%>
 <%@page import="com.sunilos.p4.bean.CourseBean"%>
 
-<jsp:useBean id="bean" class="com.sunilos.p4.bean.ProductBean"
+<jsp:useBean id="bean" class="com.sunilos.p4.bean.SmartParkingBean"
 	scope="request"></jsp:useBean>
 
 <%
@@ -21,7 +21,7 @@ String _err = ServletUtility.getErrorMessage(request);
 			style="background: linear-gradient(135deg, #0d2137 0%, #1565c0 100%);">
 			<h5 class="mb-0 fw-bold">
 				<i class="bi bi-bookmark-star-fill me-2"></i>
-				<%=bean.getId() > 0 ? "Edit Product" : "Add Product"%>
+				<%=bean.getId() > 0 ? "Edit SmartParking" : "Add SmartParking"%>
 			</h5>
 		</div>
 
@@ -44,7 +44,7 @@ String _err = ServletUtility.getErrorMessage(request);
 			}
 			%>
 
-			<form action="<%=ORSView.PRODUCT_CTL%>" method="POST">
+			<form action="<%=ORSView.SMARTPARKING_CTL%>" method="POST">
 				<input type="hidden" name="id" value="<%=bean.getId()%>"> <input
 					type="hidden" name="createdBy" value="<%=bean.getCreatedBy()%>">
 				<input type="hidden" name="modifiedBy"
@@ -55,36 +55,43 @@ String _err = ServletUtility.getErrorMessage(request);
 					value="<%=DataUtility.getTimestamp(bean.getModifiedDatetime())%>">
 
 				<div class="mb-3">
-					<label class="form-label fw-semibold">Product Name <span
-						class="text-danger">*</span></label> <input type="text" name="productName"
+					<label class="form-label fw-semibold">ParkingName <span
+						class="text-danger">*</span></label> <input type="text" name="parkingName" placeholder="Enter ParkingName"
 						class="form-control" maxlength="100"
-						value="<%=DataUtility.getStringData(bean.getProductName())%>">
-					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("productName", request)%></div>
+						value="<%=DataUtility.getStringData(bean.getParkingName())%>">
+					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("parkingName", request)%></div>
 				</div>
 
 				<div class="mb-3">
-					<label class="form-label fw-semibold">Product Category <span
-						class="text-danger">*</span></label> <input type="text"
-						name="productCategory" class="form-control" maxlength="200"
-						value="<%=DataUtility.getStringData(bean.getProductCategory())%>">
-					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("productCategory", request)%></div>
-				</div>
-
-				<div class="mb-3">
-					<label class="form-label fw-semibold">Order Date <span
-						class="text-danger">*</span></label> <input type="text" name="orderDate"
-						id="udate" readonly="readonly" class="form-control"
-						maxlength="200"
-						value="<%=DataUtility.getDateString(bean.getOrderDate())%>">
-					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("orderDate", request)%></div>
-				</div>
-
-				<div class="mb-3">
-					<label class="form-label fw-semibold">Price <span
-						class="text-danger">*</span></label> <input type="text" name="price"
+					<label class="form-label fw-semibold">ParkingCode<span
+						class="text-danger">*</span></label> <input type="text" name="parkingCode"  placeholder="Enter ParkingCode"
 						class="form-control" maxlength="200"
-						value="<%=DataUtility.getStringData(bean.getPrice())%>">
-					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("price", request)%></div>
+						value="<%=DataUtility.getStringData(bean.getParkingCode())%>">
+					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("parkingCode", request)%></div>
+				</div>
+
+				<div class="mb-3">
+					<label class="form-label fw-semibold">VehicleNumber<span
+						class="text-danger">*</span></label> <input type="text"
+						name="vehicleNumber"  placeholder="Enter VehicelNumber" class="form-control" maxlength="200"
+						value="<%=DataUtility.getStringData(bean.getVehicleNumber())%>">
+					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("vehicleNumber", request)%></div>
+				</div>
+
+				<div class="mb-3">
+					<label class="form-label fw-semibold">SlotNumber <span
+						class="text-danger">*</span></label> <input type="text" name="slotNumber" placeholder="Enter SlotNumber"
+						class="form-control" maxlength="200"
+						value="<%=DataUtility.getStringData(bean.getSlotNumber())%>">
+					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("slotNumber", request)%></div>
+				</div>
+
+				<div class="mb-3">
+					<label class="form-label fw-semibold">Status<span
+						class="text-danger">*</span></label> <input type="text" name="status"  placeholder="Enter Status"
+						class="form-control" maxlength="200"
+						value="<%=DataUtility.getStringData(bean.getSlotNumber())%>">
+					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("status", request)%></div>
 				</div>
 
 				<div class="d-flex gap-2 pt-2 border-top">
@@ -92,6 +99,9 @@ String _err = ServletUtility.getErrorMessage(request);
 						class="btn btn-primary">
 						<i class="bi bi-save me-1"></i> Save
 					</button>
+					
+					<a href="<%=ORSView.SMARTPARKING_CTL%>" class="btn btn-danger">
+					<i class="bi bi-arrow-clockwise me-1"></i>Reset</a>
 
 					<%
 					if (bean.getId() > 0) {
@@ -104,7 +114,7 @@ String _err = ServletUtility.getErrorMessage(request);
 					<%
 					}
 					%>
-					<a href="<%=ORSView.PRODUCT_LIST_CTL%>"
+					<a href="<%=ORSView.SMARTPARKING_LIST_CTL%>"
 						class="btn btn-secondary ms-auto"> <i
 						class="bi bi-x-circle me-1"></i> Cancel
 					</a>

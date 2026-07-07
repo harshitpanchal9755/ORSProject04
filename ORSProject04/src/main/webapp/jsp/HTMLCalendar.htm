@@ -1,48 +1,54 @@
 <html>
+
 <head>
 
-<style>
-.Calendar {
-	background-color: rgb(150, 194, 223);
-}
+	<style>
+		.Calendar {
+			background-color: rgb(150, 194, 223);
+		}
 
-td, select, .CalButton, .SmallFont {
-	Font-Family: verdana;
-	Font-Size: 8pt;
-	Color: black;
-	Text-Decoration: None;
-}
+		td,
+		select,
+		.CalButton,
+		.SmallFont {
+			Font-Family: verdana;
+			Font-Size: 8pt;
+			Color: black;
+			Text-Decoration: None;
+		}
 
-.CalButtonToday {
-	Color: red;
-}
-</style>
+		.CalButtonToday {
+			Color: red;
+		}
+	</style>
 </head>
-<body leftmargin="12px" topmargin="12px" class=Calendar
-	onload="WriteMonth(Month,Year);">
+
+<body leftmargin="12px" topmargin="12px" class=Calendar onload="WriteMonth(Month,Year);">
 	<form name=CalendarForm id=CalendarForm>
 		<table>
 			<tr>
-				<td colspan=7 align=right nowrap><font face=verdana size=1>
-						<select class=caldropdown id=cboMonth name=cboMonth
-						onchange="SetMonth();">
+				<td colspan=7 align=right nowrap>
+					<font face=verdana size=1>
+						<select class=caldropdown id=cboMonth name=cboMonth onchange="SetMonth();">
 							<option>September</option>
 							<option></option>
 							<option></option>
-					</select>
-				</font> <font face=verdana size=1> <select class=caldropdown
-						id=cboYear name=cboYear onchange="SetMonth();">
+						</select>
+					</font>
+					<font face=verdana size=1> <select class=caldropdown id=cboYear name=cboYear onchange="SetMonth();">
 							<option>2002</option>
 							<option></option>
 							<option></option>
-					</select> <font face=verdana size=1></td>
+						</select>
+						<font face=verdana size=1>
+				</td>
 			</tr>
 		</table>
 	</form>
-	<div class=Calendar id=ButtonPanel name=ButtonPanel
-		style="Position: absolute; Left: 13; Top: 43;"></div>
+	<div class=Calendar id=ButtonPanel name=ButtonPanel style="Position: absolute; Left: 13; Top: 43;"></div>
 
 </body>
+
 </html>
 
 
@@ -50,9 +56,9 @@ td, select, .CalButton, .SmallFont {
 <script>
 	var objOpener = window.opener;
 	var NN6 = (document.getElementById && navigator.appName.indexOf("Netscape") >= 0) ? true
-			: false;
+		: false;
 	var NN4 = (navigator.appName.indexOf("Netscape") >= 0 && !document.getElementById) ? true
-			: false;
+		: false;
 
 	function ReturnDate(CONTROL) {
 		DAY = CONTROL.toString();
@@ -82,12 +88,12 @@ td, select, .CalButton, .SmallFont {
 		var FormatAs = objOpener.FormatAs;
 
 		switch (FormatAs) {
-		/* case "dd/mm/yyyy":
-		FillZero();
-		return DAY + "/" + MONTH + "/" + YEAR; */
-		case "mm/dd/yyyy":
+			/* case "dd/mm/yyyy":
 			FillZero();
-			return MONTH + "/" + DAY + "/" + YEAR;
+			return DAY + "/" + MONTH + "/" + YEAR; */
+			case "mm/dd/yyyy":
+				FillZero();
+				return MONTH + "/" + DAY + "/" + YEAR;
 			/* case "dd/mmm/yyyy":
 			return DAY + " " + arrMonths[MONTH -1].substring(0,3) + " " + YEAR;
 			case "mmm/dd/yyyy":
@@ -163,8 +169,8 @@ td, select, .CalButton, .SmallFont {
 
 	function SetMonth() {
 		WriteMonth(
-				CalendarForm.cboMonth.selectedIndex,
-				CalendarForm.cboYear.options[CalendarForm.cboYear.selectedIndex].value);
+			CalendarForm.cboMonth.selectedIndex,
+			CalendarForm.cboYear.options[CalendarForm.cboYear.selectedIndex].value);
 	}
 
 	function WriteMonth(MONTH, YEAR) {
@@ -176,7 +182,7 @@ td, select, .CalButton, .SmallFont {
 		strCalendar += "<tr>";
 		for (var i = 0; i < arrDays.length; i++) {
 			strCalendar += "<td class=SmallFont align=center>"
-					+ arrDays[i].substring(0, 2) + "</td>";
+				+ arrDays[i].substring(0, 2) + "</td>";
 		}
 
 		strCalendar += "</tr>";
@@ -203,14 +209,14 @@ td, select, .CalButton, .SmallFont {
 						if (strTemp == IsToday && EndYear > Year - 1) {
 
 							strCalendar += "<a class=CalButtonToday href='#' onclick='ReturnDate("
-									+ ((i - FirstDay) + 1)
-									+ ");'>"
-									+ ((i - FirstDay) + 1);
+								+ ((i - FirstDay) + 1)
+								+ ");'>"
+								+ ((i - FirstDay) + 1);
 						} else {
 							strCalendar += "<a class=CalButton href='#' onclick='ReturnDate("
-									+ ((i - FirstDay) + 1)
-									+ ");'>"
-									+ ((i - FirstDay) + 1);
+								+ ((i - FirstDay) + 1)
+								+ ");'>"
+								+ ((i - FirstDay) + 1);
 						}
 						strCalendar += "</td>";
 					} else {

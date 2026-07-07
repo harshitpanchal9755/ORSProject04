@@ -59,7 +59,8 @@ String _suc = ServletUtility.getSuccessMessage(request);
 					<i class="bi bi-search me-1"></i> Search
 				</button>
 				<a href="<%=ORSView.USER_LIST_CTL%>" class="btn btn-danger btn-sm">
-				<i class="bi bi-arrow-clockwise me-1"></i>Reset</a>
+					<i class="bi bi-arrow-clockwise me-1"></i>Reset
+				</a>
 				<button type="submit" name="operation"
 					value="<%=BaseCtl.OP_DELETE%>"
 					class="btn btn-danger btn-sm ms-auto">
