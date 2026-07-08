@@ -51,37 +51,37 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						<li>
 							<h6 class="dropdown-header text-uppercase text-info small">
 								<i class="bi bi-search me-1"></i>
-								<%=ms.get("header.query") %>
+								<%=ms.get("header.query")%>
 							</h6>
 						</li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.GET_MARKSHEET_CTL%>"> <i
-								class="bi bi-search me-2 text-info"></i> <%=ms.get("header.getmark") %>
+								class="bi bi-search me-2 text-info"></i> <%=ms.get("header.getmark")%>
 								<li><a class="dropdown-item"
 									href="<%=ORSView.MARKSHEET_MERIT_LIST_CTL%>"> <i
-										class="bi bi-trophy me-2 text-warning"></i> <%=ms.get("header.merit") %>
+										class="bi bi-trophy me-2 text-warning"></i> <%=ms.get("header.merit")%>
 								</a></li> <%
-						if (isAdmin) {
-						%>
+ if (isAdmin) {
+ %>
 								<li>
 									<hr class="dropdown-divider border-secondary">
 							</li>
 								<li>
 									<h6 class="dropdown-header text-uppercase text-info small">
 										<i class="bi bi-gear me-1"></i>
-										<%=ms.get("header.mang") %>
+										<%=ms.get("header.mang")%>
 									</h6>
 							</li>
 								<li><a class="dropdown-item"
 									href="<%=ORSView.MARKSHEET_CTL%>"> <i
-										class="bi bi-plus-circle me-2 text-success"></i> <%=ms.get("header.addmark") %>
+										class="bi bi-plus-circle me-2 text-success"></i> <%=ms.get("header.addmark")%>
 								</a></li>
 								<li><a class="dropdown-item"
 									href="<%=ORSView.MARKSHEET_LIST_CTL%>"> <i
-										class="bi bi-list-ul me-2 text-primary"></i> <%=ms.get("header.marklist") %>
+										class="bi bi-list-ul me-2 text-primary"></i> <%=ms.get("header.marklist")%>
 								</a></li> <%
-						}
-						%>
+ }
+ %>
 					</ul></li>
 
 				<!-- ---- Academics: Colleges / Courses / Subjects (Admin only) ---- -->
@@ -97,10 +97,11 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3"
 						style="min-width: 210px; background: #1a2e4a;">
 
-						<!-- Colleges -->
+						<!-- Academics-->
 						<li>
 							<h6 class="dropdown-header text-uppercase text-info small">
-								<i class="bi bi-bank2 me-1"></i> Colleges
+								<i class="bi bi-bank2 me-1"></i>
+								<%=ms.get("header.acd")%>
 							</h6>
 						</li>
 						<li><a class="dropdown-item" href="<%=ORSView.COLLEGE_CTL%>">
@@ -264,11 +265,12 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3"
 						style="min-width: 230px; background: #1a2e4a;">
 
-						<!-- Academics -->
+
+						<!-- College -->
 						<li>
 							<h6 class="dropdown-header text-uppercase text-warning small">
 								<i class="bi bi-mortarboard me-1"></i>
-								<%=ms.get("hader.acd") %>
+								<%=ms.get("header.college")%>
 							</h6>
 						</li>
 						<li><a class="dropdown-item"
@@ -343,7 +345,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						style="min-width: 210px; max-width: 400px; max-height: 400px; background: #1a2e4a;">
 
 
-						<!-- Employee -->
+						<!-- Employee  Module -->
 
 						<li>
 							<h6 class="dropdown-header text-uppercase text-info small">
@@ -352,19 +354,19 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						</li>
 
 						<li><a class="dropdown-item" href="<%=ORSView.EMPLOYEE_CTL%>">
-								<i class="bi bi-person-badge-fill me-2 text-success"></i> Add
+								<i class="bi bi-person-badge-fill text-success me-1"></i> Add
 								Employee
 						</a></li>
 
 						<li><a class="dropdown-item"
 							href="<%=ORSView.EMPLOYEE_LIST_CTL%>"> <i
-								class="bi bi-person-workspace me-2 text-primary"></i>EmployeeList
+								class="bi bi-person-workspace text-primary me-2 "></i>EmployeeList
 						</a></li>
 
 						<li><hr class="dropdown-divider border-secondary"> </a></li>
 
 
-						<!-- Pg-Hostel -->
+						<!-- Pg-Hostel Module -->
 
 						<li>
 							<h6 class="dropdown-header text-uppercase text-info small">
@@ -373,18 +375,18 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						</li>
 
 						<li><a class="dropdown-item" href="<%=ORSView.PGHOSTEL_CTL%>">
-								<i class="bi bi-building-add me-2 text-success"></i> Add
+								<i class="bi bi-building-add text-success me-1"></i> Add
 								PgHostel
 						</a></li>
 
 						<li><a class="dropdown-item"
 							href="<%=ORSView.PGHOSTEL_LIST_CTL%>"> <i
-								class="bi bi-building-add me-2 text-success"></i>PgHostelList
+								class="bi bi-building-add text-success me-2"></i>PgHostelList
 						</a></li>
 
 						<li><hr class="dropdown-divider border-secondary"></li>
 
-						<!-- SoftewareLicense -->
+						<!-- SoftewareLicense Module-->
 
 						<li>
 							<h6 class="dropdown-header text-uppercase text-info small">
@@ -394,19 +396,19 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 
 						<li><a class="dropdown-item"
 							href="<%=ORSView.SOFTWARELICENSE_CTL%>"> <i
-								class="bi bi-plus-circle me-2 text-success"></i> Add
+								class="bi bi-plus-circle text-success me-1"></i> Add
 								SoftwareLicense
 						</a></li>
 
 						<li><a class="dropdown-item"
 							href="<%=ORSView.SOFTWARELICENSE_LIST_CTL%>"> <i
-								class="bi bi-card-checklist me-2 text-success"></i>SoftwareLicenseList
+								class="bi bi-card-checklist text-success me-2"></i>SoftwareLicenseList
 
 						</a></li>
 
 						<li><hr class="dropdown-divider border-secondary"></li>
 
-						<!-- Hospital -->
+						<!-- Hospital Module -->
 
 						<li>
 							<h6 class="dropdown-header text-uppercase text-info small">
@@ -415,36 +417,36 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						</li>
 
 						<li><a class="dropdown-item" href="<%=ORSView.HOSPITAL_CTL%>"><i
-								class="bi bi-clipboard2-plus-fill me=2 text-success"></i> Add
-								Hospital</li>
-						</a>
-
+								class="bi bi-clipboard2-plus-fill me-1 text-success"></i> Add
+								Hospital </a></li>
 
 						<li><a class="dropdown-item"
 							href="<%=ORSView.HOSPITAL_LIST_CTL%>"> <i
-								class="bi bi-list-check me-2 text-success"></i> HospitalList </li>
+								class="bi bi-list-check text-success me-1"></i> HospitalList </li>
 						</a>
 
 						<li><hr class="dropdown-divider border-secondary"></li>
-						
-						<!-- SmartParking -->
-						
+
+						<!-- SmartParking Module -->
+
 						<li>
-						
-						<h6 class="dropdown-item text-uppercase text-info small">
-						<i class="bi bi-p-circle me-1"></i> SmartParking
-						</h6></li>
-						
-						<li> <a class="dropdown-item" href="<%=ORSView.SMARTPARKING_CTL%>">
-						<i class="bi bi-p-square-fill me-2 text-success"></i>Add SmartParking</a>
+
+							<h6 class="dropdown-item text-uppercase text-info small">
+								<i class="bi bi-car-front me-1"></i> SmartParking
 						</li>
-						
-						<li> <a class="dropdown-item" href="<%=ORSView.SMARTPARKING_LIST_CTL%>">
-						<i class="bi bi-p-square me-2 text-success"></i>SmartParkingList</a>
-						</li>
-						
+
+						<li><a class="dropdown-item"
+							href="<%=ORSView.SMARTPARKING_CTL%>"> <i
+								class="bi bi-plus-circle text-success me-2"></i>Add SmartParking
+						</a></li>
+
+						<li><a class="dropdown-item"
+							href="<%=ORSView.SMARTPARKING_LIST_CTL%>"> <i
+								class="bi bi-card-list text-success me-2"></i>SmartParkingList
+						</a></li>
+
 						<li><hr class="dropdown-divider border-secondary"></li>
-						
+
 					</ul></li>
 
 
@@ -493,11 +495,11 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 				%>
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle d-flex align-items-center gap-1 px-2"
-					href="#" data-bs-toggle="dropdown" aria-expanded="false"> <span
-						class="rounded-circle bg-white text-primary d-flex align-items-center justify-content-center fw-bold"
-						style="width: 28px; height: 28px; font-size: 0.75rem; flex-shrink: 0;">
-							<%=userBean.getFirstName().substring(0, 1).toUpperCase()%>
-					</span> <span class="d-none d-lg-inline small"><%=userBean.getFirstName()%></span>
+					href="#" data-bs-toggle="dropdown" aria-expanded="false"> <img
+						src="<%=ORSView.UPLOAD_PHOTO_CTL%>?id=<%=userBean.getId()%>"
+						alt="User Photo" class="rounded-circle border" width="28"
+						height="28" style="object-fit: cover; flex-shrink: 0;"> <span
+						class="d-none d-lg-inline small"><%=userBean.getFirstName()%></span>
 				</a>
 					<ul
 						class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow border-0 rounded-3"

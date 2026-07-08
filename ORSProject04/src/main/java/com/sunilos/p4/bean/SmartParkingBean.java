@@ -1,6 +1,7 @@
 package com.sunilos.p4.bean;
 
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import com.sunilos.p4.bean.BaseBean;
 
@@ -74,7 +75,7 @@ public class SmartParkingBean extends BaseBean {
 			this.setSlotNumber(rs.getString("slotNumber"));
 			this.setStatus(rs.getString("status"));
 
-		} catch (Exception e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}

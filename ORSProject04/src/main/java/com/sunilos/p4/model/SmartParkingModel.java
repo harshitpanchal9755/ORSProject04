@@ -34,7 +34,7 @@ public class SmartParkingModel extends BaseModel<SmartParkingBean> {
 			conn.setAutoCommit(false);
 			System.out.println("model is add Start");
 
-			PreparedStatement ps = conn.prepareStatement("insert into " + getTable() + " smartparking values(?,?,?,?,?,?,?,?,?,?)");
+			PreparedStatement ps = conn.prepareStatement("insert into " + getTable() + " values(?,?,?,?,?,?,?,?,?,?)");
 			ps.setInt(1, pk);
 			ps.setString(2, bean.getParkingName());
 			ps.setString(3, bean.getParkingCode());
@@ -77,7 +77,7 @@ public class SmartParkingModel extends BaseModel<SmartParkingBean> {
 		Connection conn = null;
 		SmartParkingBean existBean = findByParkingName(bean.getParkingName());
 
-		if (existBean != null) {
+		if (existBean != null && existBean.getId() != bean.getId()) {
 			throw new DuplicateRecordException("email id already exist");
 		}
 

@@ -90,7 +90,7 @@ String _err = ServletUtility.getErrorMessage(request);
 					<label class="form-label fw-semibold">Status<span
 						class="text-danger">*</span></label> <input type="text" name="status"  placeholder="Enter Status"
 						class="form-control" maxlength="200"
-						value="<%=DataUtility.getStringData(bean.getSlotNumber())%>">
+						value="<%=DataUtility.getStringData(bean.getStatus())%>">
 					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("status", request)%></div>
 				</div>
 
@@ -103,17 +103,6 @@ String _err = ServletUtility.getErrorMessage(request);
 					<a href="<%=ORSView.SMARTPARKING_CTL%>" class="btn btn-danger">
 					<i class="bi bi-arrow-clockwise me-1"></i>Reset</a>
 
-					<%
-					if (bean.getId() > 0) {
-					%>
-					<button type="submit" name="operation"
-						value="<%=BaseCtl.OP_DELETE%>" class="btn btn-danger"
-						onclick="return confirm('Delete this Product ?')">
-						<i class="bi bi-trash me-1"></i> Delete</i>
-					</button>
-					<%
-					}
-					%>
 					<a href="<%=ORSView.SMARTPARKING_LIST_CTL%>"
 						class="btn btn-secondary ms-auto"> <i
 						class="bi bi-x-circle me-1"></i> Cancel

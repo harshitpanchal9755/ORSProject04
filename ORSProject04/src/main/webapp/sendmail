@@ -17,7 +17,7 @@ Ans: LOGGER log = LOGGER.getLOGGER();
 
 SendMail Flow :-
 
-Stmp ka use kiya jata hai sendmail karne ke liye;
+Smtp ka use kiya jata hai sendmail karne ke liye;
 
 sabse pelhe project ki depemdency add ki jati ha javax.mail (mail.dependency) pom.xml add ki hai, system.property me set ki hai 4 parameter set kiye hai.
 

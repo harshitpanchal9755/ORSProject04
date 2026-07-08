@@ -107,6 +107,7 @@ String _suc = ServletUtility.getSuccessMessage(request);
 							<th width="40"><input type="checkbox"
 								onclick="document.querySelectorAll('input[name=ids]').forEach(c=>c.checked=this.checked)"></th>
 							<th>S.No</th>
+							<th>Photo</th>
 							<th>First Name</th>
 							<th>Last Name</th>
 							<th>Login ID</th>
@@ -129,6 +130,11 @@ String _suc = ServletUtility.getSuccessMessage(request);
 								value="<%=bean.getId()%>"
 								<%=(user.getId() == bean.getId() || bean.getRoleId() == RoleBean.ADMIN) ? "disabled" : ""%>></td>
 							<td class="text-muted small"><%=index++%></td>
+							<td><img
+								src="<%=ORSView.UPLOAD_PHOTO_CTL%>?id=<%=bean.getId()%>"
+								onerror="this.style.display='none';" alt="User Photo"
+								class="rounded-circle border" width="30" height="30"
+								style="object-fit: cover;"></td>
 							<td class="fw-semibold"><%=bean.getFirstName()%></td>
 							<td><%=bean.getLastName()%></td>
 							<td><%=bean.getLogin()%></td>
@@ -147,7 +153,7 @@ String _suc = ServletUtility.getSuccessMessage(request);
 					</tbody>
 				</table>
 			</div>
-
+	
 			<div class="p-3 border-top">
 				<%@ include file="ListFooter.jsp"%>
 			</div>
