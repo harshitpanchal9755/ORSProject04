@@ -87,7 +87,8 @@ public class SmartParkingModel extends BaseModel<SmartParkingBean> {
 			conn.setAutoCommit(false);
 			System.out.println("model is update Start");
 
-			PreparedStatement ps = conn.prepareStatement("update " + getTable() + " set parkingname = ?, parkingcode = ?, vehiclenumber = ?, slotnumber = ?, status = ?, created_by = ?, modified_by = ? where id = ?");
+			PreparedStatement ps = conn.prepareStatement("update " + getTable()
+					+ " set parkingname = ?, parkingcode = ?, vehiclenumber = ?, slotnumber = ?, status = ?, created_by = ?, modified_by = ? where id = ?");
 			ps.setString(1, bean.getParkingName());
 			ps.setString(2, bean.getParkingCode());
 			ps.setString(3, bean.getVehicleNumber());
@@ -116,18 +117,21 @@ public class SmartParkingModel extends BaseModel<SmartParkingBean> {
 		} finally {
 			JDBCDataSource.closeConnection(conn);
 		}
-	
 
 	}
 
 	@Override
 	public String getWhereClause(SmartParkingBean bean) {
-		
+
 		StringBuffer sql = new StringBuffer();
-		
-		if(bean != null) {
-			
-			if(bean.getParkingCode() != null && bean.getParkingCode().length() > 0) {
+
+		if (bean != null) {
+
+			if (bean.getId() > 0) {
+				sql.append(" and id = " + bean.getId());
+			}
+
+			if (bean.getParkingCode() != null && bean.getParkingCode().length() > 0) {
 				sql.append(" and parkingcode like '" + bean.getParkingCode() + "%'");
 			}
 		}
@@ -136,7 +140,6 @@ public class SmartParkingModel extends BaseModel<SmartParkingBean> {
 
 	@Override
 	public String getTable() {
-		// TODO Auto-generated method stub
 		return "smartparking";
 	}
 

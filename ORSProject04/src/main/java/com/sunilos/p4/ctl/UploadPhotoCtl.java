@@ -126,7 +126,7 @@ public class UploadPhotoCtl extends HttpServlet {
 		String fileName = part.getSubmittedFileName();  /// file ka name lena hai harshit.png
 
 		// Folder path from system.properties
-		String basePath = PropertyReader.getValue("photoPath"); /// photopath diya hai system.properties file me
+		String basePath = PropertyReader.getValue("photoPath"); /// photopath diya hai system.properties file me 
 
 		File folder = new File(basePath); /// folder nahi hai to folder create karta hai
 
