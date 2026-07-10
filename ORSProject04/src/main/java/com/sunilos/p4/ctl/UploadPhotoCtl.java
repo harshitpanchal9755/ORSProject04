@@ -126,7 +126,7 @@ public class UploadPhotoCtl extends HttpServlet {
 		String fileName = part.getSubmittedFileName();  /// file ka name lena hai harshit.png
 
 		// Folder path from system.properties
-		String basePath = PropertyReader.getValue("photoPath");
+		String basePath = PropertyReader.getValue("photoPath"); /// photopath diya hai system.properties file me
 
 		File folder = new File(basePath); /// folder nahi hai to folder create karta hai
 
@@ -140,7 +140,7 @@ public class UploadPhotoCtl extends HttpServlet {
 		InputStream input = part.getInputStream(); /// io in java 
 		FileOutputStream output = new FileOutputStream(destFile);
 
-		byte[] buffer = new byte[4096];
+		byte[] buffer = new byte[4096]; /// byte ka array bana hai or for buffer ka size hai 4096
 		int bytesRead;
 
 		while ((bytesRead = input.read(buffer)) != -1) {
