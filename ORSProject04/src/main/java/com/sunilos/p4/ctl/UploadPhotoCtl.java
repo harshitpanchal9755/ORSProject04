@@ -113,34 +113,32 @@ public class UploadPhotoCtl extends HttpServlet {
 		long id = DataUtility.getLong(request.getParameter("id"));
 		String view = request.getParameter("view");
 
-		Part part = request.getPart("photo"); //// request.getpart ka use kiya 
+		Part part = request.getPart("photo");
 
-		if (part == null || part.getSize() == 0) { /// bina file choose kara upload button per click kiya  to please selsect a photo
+		if (part == null || part.getSize() == 0) {
 			response.getWriter().println("Please select a photo.");
 			return;
 		}
-		
-		System.out.println("photo " + part);
 
 		// Original file name
-		String fileName = part.getSubmittedFileName();  /// file ka name lena hai harshit.png
+		String fileName = part.getSubmittedFileName();
 
 		// Folder path from system.properties
-		String basePath = PropertyReader.getValue("photoPath"); /// photopath diya hai system.properties file me 
+		String basePath = PropertyReader.getValue("photoPath");
 
-		File folder = new File(basePath); /// folder nahi hai to folder create karta hai
+		File folder = new File(basePath);
 
-		if (!folder.exists()) { /// folder nahi hai
-			folder.mkdirs(); //// folder create karta 
+		if (!folder.exists()) {
+			folder.mkdirs();
 		}
 
-		File destFile = new File(folder, fileName);  /// d=file ka destination bana diya hai 
+		File destFile = new File(folder, fileName);
 
 		// Save file
-		InputStream input = part.getInputStream(); /// io in java 
+		InputStream input = part.getInputStream();
 		FileOutputStream output = new FileOutputStream(destFile);
 
-		byte[] buffer = new byte[4096]; /// byte ka array bana hai or for buffer ka size hai 4096
+		byte[] buffer = new byte[4096];
 		int bytesRead;
 
 		while ((bytesRead = input.read(buffer)) != -1) {
