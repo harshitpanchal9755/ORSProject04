@@ -127,8 +127,8 @@ public class SmartParkingModel extends BaseModel<SmartParkingBean> {
 		
 		if(bean != null) {
 			
-			if(bean.getParkingCode() != null && bean.getParkingName().length() > 0) {
-				sql.append(" and parkingname like '" + bean.getParkingName() + "%'");
+			if(bean.getParkingCode() != null && bean.getParkingCode().length() > 0) {
+				sql.append(" and parkingcode like '" + bean.getParkingCode() + "%'");
 			}
 		}
 		return sql.toString();

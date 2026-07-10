@@ -1,11 +1,9 @@
-<%@page import="com.sunilos.p4.ctl.SubjectCtl"%>
+<%@page import="com.sunilos.p4.util.HTMLUtility"%>
+<%@page import="java.util.HashMap"%>
 <%@page import="com.sunilos.p4.ctl.BaseCtl"%>
-<%@page import="com.sunilos.p4.ctl.ORSView"%>
 <%@page import="com.sunilos.p4.util.DataUtility"%>
+<%@page import="com.sunilos.p4.ctl.ORSView"%>
 <%@page import="com.sunilos.p4.util.ServletUtility"%>
-<%@page import="java.util.List"%>
-<%@page import="com.sunilos.p4.bean.CourseBean"%>
-
 <jsp:useBean id="bean" class="com.sunilos.p4.bean.SmartParkingBean"
 	scope="request"></jsp:useBean>
 
@@ -15,7 +13,8 @@ String _err = ServletUtility.getErrorMessage(request);
 %>
 
 <div class="container py-4" style="max-width: 580px;">
-	<div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+	<div class="card border-
+	0 shadow-sm rounded-4 overflow-hidden">
 
 		<div class="card-header text-white border-0 py-3 px-4"
 			style="background: linear-gradient(135deg, #0d2137 0%, #1565c0 100%);">
@@ -99,14 +98,14 @@ String _err = ServletUtility.getErrorMessage(request);
 						class="btn btn-primary">
 						<i class="bi bi-save me-1"></i> Save
 					</button>
-					
-					<a href="<%=ORSView.SMARTPARKING_CTL%>" class="btn btn-danger">
-					<i class="bi bi-arrow-clockwise me-1"></i>Reset</a>
 
-					<a href="<%=ORSView.SMARTPARKING_LIST_CTL%>"
+					<a href="<%=ORSView.SMARTPARKING_CTL%>" class="btn btn-danger">
+						<i class="bi bi-arrow-clockwise me-1"></i> Reset
+					</a> <a href="<%=ORSView.SMARTPARKING_LIST_CTL%>"
 						class="btn btn-secondary ms-auto"> <i
-						class="bi bi-x-circle me-1"></i> Cancel
+						class="bi bi-x-circle me-1"></i>Cancel
 					</a>
+
 				</div>
 			</form>
 		</div>
