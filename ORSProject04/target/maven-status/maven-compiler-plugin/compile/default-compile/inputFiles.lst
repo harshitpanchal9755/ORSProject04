@@ -1,6 +1,7 @@
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\HospitalCtl.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\bean\RoleBean.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\UserCtl.java
+D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\UploadPhotoCtl.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\exception\DuplicateRecordException.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\util\JDBCDataSource.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\FacultyListCtl.java
@@ -11,6 +12,7 @@ D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\util\PropertyR
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\rest\RoleRestCtl.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\ProductReportCtl.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\SubjectListCtl.java
+D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\bean\SmartParkingBean.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\MarksheetListCtl.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\bean\InterViewBean.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\ForgetPasswordCtl.java
@@ -52,10 +54,13 @@ D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\HospitalLi
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\tag\MessageTag.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\bean\StudentBean.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\model\InterViewModel.java
+D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\SmartParkingListCtl.java
+D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\SmartParkingCtl.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\model\SoftwareLicenseModel.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\EmployeeReportCtl.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\CollegeCtl.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\model\HospitalModel.java
+D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\bean\AiScannerBean.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\StudentListCtl.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\EmployeeCtl.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\model\test\TestPgHostelModel.java
@@ -64,6 +69,7 @@ D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\exception\Data
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\MarksheetReportCtl.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\RoleReportCtl.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\ChangePasswordCtl.java
+D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\model\SmartParkingModel.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\model\test\RoleModelTest.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\UserReportCtl.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\util\DatabaseUtility.java
@@ -104,6 +110,7 @@ D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\WelcomeCtl
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\RoleCtl.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\model\UserModel.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\PgHostelReportCtl.java
+D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\model\AiScannerModel.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\HelloServlet.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\model\test\UserModelTest.java
 D:\Project-V0 Workspace\ORSProject04\src\main\java\com\sunilos\p4\ctl\ORSView.java

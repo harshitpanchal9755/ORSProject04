@@ -1,3 +1,4 @@
+com\sunilos\p4\ctl\SmartParkingListCtl.class
 com\sunilos\p4\model\InterViewModel.class
 com\sunilos\p4\model\UserModel.class
 com\sunilos\p4\ctl\CourseReportCtl.class
@@ -12,6 +13,7 @@ com\sunilos\p4\ctl\PgHostelCtl.class
 com\sunilos\p4\model\SoftwareLicenseModel.class
 com\sunilos\p4\ctl\ProductReportCtl.class
 com\sunilos\p4\model\SubjectModel.class
+com\sunilos\p4\ctl\UploadPhotoCtl.class
 com\sunilos\p4\ctl\GetMarksheetCtl.class
 com\sunilos\p4\util\DataUtility.class
 com\sunilos\p4\bean\SoftwareLicenseBean.class
@@ -19,6 +21,7 @@ com\sunilos\p4\ctl\MyProfileCtl.class
 com\sunilos\p4\model\StudentModel.class
 com\sunilos\p4\ctl\EmployeeListCtl.class
 com\sunilos\p4\model\test\RoleModelTest.class
+com\sunilos\p4\bean\AiScannerBean.class
 com\sunilos\p4\ctl\LanguageFilter.class
 com\sunilos\p4\bean\EmployeeBean.class
 com\sunilos\p4\model\BaseModel.class
@@ -83,6 +86,7 @@ com\sunilos\p4\ctl\CourseListCtl.class
 com\sunilos\p4\ctl\UserCtl.class
 com\sunilos\p4\bean\UserBean.class
 com\sunilos\p4\util\HTMLUtility.class
+com\sunilos\p4\ctl\SmartParkingCtl.class
 com\sunilos\p4\ctl\FrontController.class
 com\sunilos\p4\ctl\InterViewCtl.class
 com\sunilos\p4\model\test\EmailUtilityTest.class
@@ -91,9 +95,11 @@ com\sunilos\p4\rest\RoleRestCtl.class
 com\sunilos\p4\ctl\SoftwareLicenseCtl.class
 com\sunilos\p4\bean\HospitalBean.class
 com\sunilos\p4\bean\CollegeBean.class
+com\sunilos\p4\model\SmartParkingModel.class
 com\sunilos\p4\util\PropertyReader.class
 com\sunilos\p4\model\test\TestEmployeeModel.class
 com\sunilos\p4\ctl\SoftwareLicenseListCtl.class
+com\sunilos\p4\bean\SmartParkingBean.class
 com\sunilos\p4\util\EmailBuilder.class
 com\sunilos\p4\util\EmailUtility$1.class
 com\sunilos\p4\ctl\UserReportCtl.class
