@@ -22,9 +22,11 @@ pipeline {
 
         stage('Clone Repository') {
             steps {
-                git branch: 'main',
-                    credentialsId: 'github-credentials',
-                    url: 'https://github.com/harshitpanchal9755/ORSProject04.git'
+               git(
+    branch: 'main',
+    credentialsId: 'github-credentials',
+    url: 'https://github.com/harshitpanchal9755/ORSProject04.git'
+)
             }
         }
 
