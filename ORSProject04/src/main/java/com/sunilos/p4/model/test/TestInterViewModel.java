@@ -8,10 +8,12 @@ import com.sunilos.p4.model.InterViewModel;
 
 public class TestInterViewModel {
 	public static InterViewBean bean = new InterViewBean();
+
 	public static void main(String[] args) {
 		testAdd();
-		
+
 	}
+
 	private static void testAdd() {
 		InterViewModel model = new InterViewModel();
 		bean.setId(1);
@@ -23,10 +25,8 @@ public class TestInterViewModel {
 		bean.setModifiedBy("root");
 		bean.setCreatedDatetime(new Timestamp(new Date().getTime()));
 		bean.setModifiedDatetime(new Timestamp(new Date().getTime()));
-		
+
 		model.add(bean);
 	}
-	
-	
 
 }
