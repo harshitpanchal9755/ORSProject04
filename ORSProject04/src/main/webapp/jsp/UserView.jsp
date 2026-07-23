@@ -72,7 +72,7 @@ genderMap.put("F", "Female");
 
 					<input type="hidden" name="id" value="<%=bean.getId()%>"> <input
 						type="file" name="photo" class="form-control form-control-sm"
-						accept="image/*">
+						accept="image/*"><input type="hidden" name = "id" value="<%=ORSView.USER_VIEW %>" >
 
 
 					<button type="submit"

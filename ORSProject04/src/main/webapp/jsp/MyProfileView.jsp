@@ -101,7 +101,7 @@
 					</div>
 					<div class="col-md-6">
 						<label class="form-label fw-semibold">Mobile No <span
-							class="text-danger">*</span></label> <input type="text" name="mobileNo"
+							class="text-danger">*</span></label> <input type="text" name="mobileNo" width="10"
 							class="form-control"
 							value="<%=DataUtility.getStringData(bean.getMobileNo())%>">
 						<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("mobileNo", request)%></div>

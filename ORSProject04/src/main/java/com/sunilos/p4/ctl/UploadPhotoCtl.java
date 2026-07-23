@@ -178,6 +178,7 @@ public class UploadPhotoCtl extends HttpServlet {
 
 			// Update photo name in database
 			model.updatePhoto(id, fileName);
+			ServletUtility.setSuccessMessage("image successfully update", request);
 
 			HttpSession session = request.getSession(false);
 

@@ -1,3 +1,4 @@
+<%@page import="com.sunilos.p4.bean.QrScannerCodeBean"%>
 <%@page import="com.sunilos.p4.bean.SoftwareLicenseBean"%>
 <%@page import="com.sunilos.p4.bean.ProductBean"%>
 <%@page import="com.sunilos.p4.ctl.BaseCtl"%>
@@ -11,7 +12,7 @@ int pageNo = ServletUtility.getPageNo(request);
 int pageSize = ServletUtility.getPageSize(request);
 int index = ((pageNo - 1) * pageSize) + 1;
 List list = ServletUtility.getList(request);
-Iterator<SoftwareLicenseBean> it = list.iterator();
+Iterator<QrScannerCodeBean> it = list.iterator();
 String _err = ServletUtility.getErrorMessage(request);
 %>
 
@@ -22,7 +23,7 @@ String _err = ServletUtility.getErrorMessage(request);
 			class="card-header text-white border-0 py-3 px-4 d-flex justify-content-between align-items-center"
 			style="background: linear-gradient(135deg, #0d2137 0%, #1565c0 100%);">
 			<h5 class="mb-0 fw-bold">
-				<i class="bi bi-shield-check me-2"></i> SoftwareLicense List
+				<i class="bi bi-shield-check me-2"></i> QrScannerCode List
 			</h5>
 			<div class="d-flex gap-2">
 				<a href="#" target="_blank"
@@ -31,29 +32,32 @@ String _err = ServletUtility.getErrorMessage(request);
 				</a> <a href="#?type=doc" target="_blank"
 					class="btn btn-sm btn-info fw-semibold"> <i
 					class="bi bi-file-earmark-word me-1"></i> Print DOC
-				</a> <a href="SoftwareLicenseCtl"
+				</a> <a href="QrScannerCodeCtl"
 					class="btn btn-sm btn-light text-primary fw-semibold"> <i
-					class="bi bi-cart me-1"></i> Add SoftwareLicense
+					class="bi bi-cart me-1"></i> Add QrScannerCode
 				</a>
 			</div>
 		</div>
 
-		<form action="<%=ORSView.SOFTWARELICENSE_LIST_CTL%>" method="POST">
+		<form action="<%=ORSView.QRSCANNERCODE_LIST_CTL%>" method="POST">
 			<input type="hidden" name="pageNo" value="<%=pageNo%>"> <input
 				type="hidden" name="pageSize" value="<%=pageSize%>">
 
 			<div
 				class="p-3 bg-light border-bottom d-flex flex-wrap gap-2 align-items-center">
 
-				<input type="text" name="softwareName"
+				<input type="text" name="qrcode"
 					class="form-control form-control-sm" style="max-width: 220px;"
-					placeholder="Search by SoftwareName"
-					value="<%=ServletUtility.getParameter("softwareName", request)%>">
+					placeholder="Search by QrCode"
+					value="<%=ServletUtility.getParameter("qrcode", request)%>">
 
 				<button type="submit" name="operation"
 					value="<%=BaseCtl.OP_SEARCH%>" class="btn btn-primary btn-sm">
 					<i class="bi bi-search me-1"></i> Search
 				</button>
+				<a href="<%=ORSView.QRSCANNERCODE_LIST_CTL%>" class="btn btn-danger btn-sm">
+				<i class="bi bi-arrow-clockwise me-2"></i>Reset
+				</a>
 				<button type="submit" name="operation"
 					value="<%=BaseCtl.OP_DELETE%>"
 					class="btn btn-danger btn-sm ms-auto">
@@ -77,27 +81,27 @@ String _err = ServletUtility.getErrorMessage(request);
 							<th width="40"><input type="checkbox"
 								onclick="document.querySelectorAll('input[name=ids]').forEach(c=>c.checked=this.checked)"></th>
 							<th>S.No</th>
-							<th>SoftwareName</th>
-							<th>LicenseKey</th>
-							<th>ExpiryKey</th>
-							<th>Vendore</th>
+							<th>QrCode</th>
+							<th>ScannedBy</th>
+							<th>ScanTime</th>
+							<th>Status</th>
 							<th>Edit</th>
 						</tr>
 					</thead>
 					<tbody>
 						<%
 						while (it.hasNext()) {
-							SoftwareLicenseBean bean = it.next();
+							QrScannerCodeBean bean = it.next();
 						%>
 						<tr>
 							<td><input type="checkbox" name="ids"
 								value="<%=bean.getId()%>"></td>
-							<td class="fw-semibold"><%=index++%></td>
-							<td class="fw-semibold"><%=bean.getSoftwareName()%></td>
-							<td class="fw-semibold"><%=bean.getLicenseKey()%></td>
-							<td class="fw-semibold"><%=bean.getExpiryDate()%></td>
-							<td class="fw-semibold"><%=bean.getVendore()%></td>
-							<td><a href="SoftwareLicenseCtl?id=<%=bean.getId()%>"
+							<td class="text-muted small"><%=index++%></td>
+							<td class="fw-semibold"><%=bean.getQrCode()%></td>
+							<td class="fw-semibold"><%=bean.getScannedBy()%></td>
+							<td class="fw-semibold"><%=bean.getScanTime()%></td>
+							<td class="fw-semibold"><%=bean.getStatus()%></td>
+							<td><a href="QrScannerCodeCtl?id=<%=bean.getId()%>"
 								class="btn btn-sm btn-outline-primary"> <i
 									class="bi bi-pencil"></i> Edit
 							</a></td>

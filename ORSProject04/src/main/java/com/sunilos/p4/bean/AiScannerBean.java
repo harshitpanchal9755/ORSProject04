@@ -5,26 +5,17 @@ import java.sql.SQLException;
 
 public class AiScannerBean extends BaseBean {
 
-	private long id;
-	private String name;
+	private String aiscannerName;
 	private String type;
 	private String description;
 	private String status;
 
-	public long getId() {
-		return id;
+	public String getAiscannerName() {
+		return aiscannerName;
 	}
 
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
+	public void setAiscannerName(String aiscannerName) {
+		this.aiscannerName = aiscannerName;
 	}
 
 	public String getType() {
@@ -53,28 +44,28 @@ public class AiScannerBean extends BaseBean {
 
 	@Override
 	public String getKey() {
-		// TODO Auto-generated method stub
 		return id + "";
 	}
 
 	@Override
 	public String getValue() {
-		// TODO Auto-generated method stub
-		return name;
+		return aiscannerName;
 	}
 	
 	@Override
 	public void setResultset(ResultSet rs) {
 		super.setResultset(rs);
 		try {
-			this.setName(rs.getString("name"));
+			this.setAiscannerName(rs.getString("aiscannerName"));
 			this.setType(rs.getString("type"));
 			this.setDescription(rs.getString("description"));
 			this.setStatus(rs.getString("status"));
 			
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		
 		
 	}
 

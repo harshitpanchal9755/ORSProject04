@@ -127,6 +127,25 @@ public interface ORSView {
 	public String SMARTPARKING_LIST_CTL = APP_CONTEXT + "/ctl/SmartParkingListCtl";
 	public String SMARTPARKING_LIST_VIEW = PAGE_FOLDER + "/SmartParkingListView.jsp";
 	
+	///// --------- AiScanner Module------////
+	
+	public String AISCANNER_CTL = APP_CONTEXT + "/ctl/AiScannerCtl";
+	public String AISCANNER_VIEW = PAGE_FOLDER + "/AiScannerView.jsp";
+	public String AISCANNER_LIST_CTL = APP_CONTEXT + "/ctl/AiScannerListCtl";
+	public String AISCANNER_LIST_VIEW = PAGE_FOLDER + "AiScannerListView.jsp";
+	public String AISCANNER_REPORT_VIEW = "/reports/AiScannerListReport.jrxml";
+	
+	/// ----- QrScannerCode module ------- ////
+	
+	public String QRSCANNERCODE_CTL = APP_CONTEXT + "/ctl/QrScannerCodeCtl";
+	public String QRSCANNERCODE_VIEW = PAGE_FOLDER + "/QrScannerCodeView.jsp";
+	public String QRSCANNERCODE_LIST_CTL = APP_CONTEXT + "/ctl/QrScannerCodeListCtl";
+	public String QRSCANNERCODE_LIST_VIEW = PAGE_FOLDER + "/QrScannerCodeListView.jsp";
+	public String QRSCANNERCODE_REPORT_VIEW = "/reports/QrScannerCodeListReport.jrxml";
+	
+	
+	
+	
 	
 	////------ Report View ------- //////
 

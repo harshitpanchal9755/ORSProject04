@@ -447,6 +447,48 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 
 						<li><hr class="dropdown-divider border-secondary"></li>
 
+
+						<!-- AiScanner Module -->
+
+						<li>
+							<h6 class="dropdown-item text-uppercase text-info small">
+								<i class="bi bi-qr-code me-2"></i>AiScanner
+						</li>
+
+						<li><a class="dropdown-item"
+							href="<%=ORSView.AISCANNER_CTL%>"> <i
+								class="bi bi-card-list text-success me-2"></i> Add AiScanner
+						</a></li>
+
+						<li><a class="dropdown-item"
+							href="<%=ORSView.AISCANNER_LIST_CTL%>"> <i
+								class="bi bi-card-list text-success me-2"></i>AiScanner List
+						</a></li>
+
+						<li><hr class="dropdown-divider border-secondary"></li>
+
+						<!-- QrscannerCode -->
+
+
+						<li>
+
+							<h6 class="dropdown-item text-uppercase text-info small">
+								<i class="bi bi-qr-code me-2"></i>QrScannerCode
+							</h6>
+						</li>
+
+						<li><a class="dropdown-item"
+							href="<%=ORSView.QRSCANNERCODE_CTL%>"> <i
+								class="bi bi-card-list text-success me-2"></i>Add QrScannerCode
+						</a></li>
+
+						<li><a class="dropdown-item"
+							href="<%=ORSView.QRSCANNERCODE_LIST_CTL%>"> <i
+								class="bi bi-card-list text-success me-2"></i> QrScannerCodeList
+						</a></li>
+
+						<li><hr class="dropdown-divider border-secondary"></li>
+
 					</ul></li>
 
 
